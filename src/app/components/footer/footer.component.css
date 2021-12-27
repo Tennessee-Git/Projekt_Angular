@@ -1,0 +1,12 @@
+.main-footer {
+  color: white;
+  background-color: rgb(194, 87, 87);
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  padding-left: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: left;
+  overflow: hidden;
+}
