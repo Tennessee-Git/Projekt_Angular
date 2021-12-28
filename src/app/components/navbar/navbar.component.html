@@ -1,15 +1,6 @@
 <nav class="NavbarItems">
   <h1 class="navbar-logo">CinemApp<i class="fas fa-film"></i></h1>
-  <div class="menu-icon" (click)="handleClick()">
-    <i [ngClass]="{
-      'fas fa-times': clicked,
-      'fas fa-bars': !clicked
-    }"></i>
-  </div>
-  <ul [ngClass]="{
-    'nav-menu active' : clicked,
-    'nav-menu' : !clicked
-  }">
+  <ul class="nav-menu">
     <li>
       <a routerLink="/" class="nav-links">Strona główna</a>
     </li>
