@@ -1,1 +1,23 @@
-<p>navbar works!</p>
+<nav class="NavbarItems">
+  <h1 class="navbar-logo">CinemApp<i class="fas fa-film"></i></h1>
+  <div class="menu-icon" (click)="handleClick()">
+    <i [ngClass]="{
+      'fas fa-times': clicked,
+      'fas fa-bars': !clicked
+    }"></i>
+  </div>
+  <ul [ngClass]="{
+    'nav-menu active' : clicked,
+    'nav-menu' : !clicked
+  }">
+    <li>
+      <a routerLink="/" class="nav-links">Strona główna</a>
+    </li>
+    <li>
+      <a routerLink="/Seanse" class="nav-links">Seanse</a>
+    </li>
+    <li>
+      <a routerLink="/Filmy" class="nav-links">Filmy</a>
+    </li>
+  </ul>
+</nav>
