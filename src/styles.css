@@ -73,5 +73,20 @@ code {
   font-size:small;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.ctrl-btn {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  border-radius: 4px;
+  text-shadow:rgb(0, 0, 0) 1px 1px 5px;
+  border-color: transparent;
+  transition: all 0.4s ease;
+  font-size: 1.25rem;
+  padding: 5px;
+  margin: 0;
+}
+
+.ctrl-btn:hover {
+  color: rgb(255, 58, 58);
+  text-shadow:rgb(255, 255, 255) 1px 1px 5px;
+  cursor: pointer;
+}

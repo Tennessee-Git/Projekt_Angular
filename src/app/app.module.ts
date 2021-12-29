@@ -11,6 +11,10 @@ import { MoviesPageComponent } from './pages/movies-page/movies-page.component';
 import { ShowingsPageComponent } from './pages/showings-page/showings-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { MovieDetailsComponent } from './components/movie components/movie-details/movie-details.component';
+import { MovieControlsComponent } from './components/movie components/movie-controls/movie-controls.component';
+import { EditMovieFormComponent } from './components/forms/edit-movie-form/edit-movie-form.component';
+import { MovieListComponent } from './components/movie components/movie-list/movie-list.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     HomePageComponent,
     MoviesPageComponent,
-    ShowingsPageComponent
+    ShowingsPageComponent,
+    MovieDetailsComponent,
+    MovieControlsComponent,
+    EditMovieFormComponent,
+    MovieListComponent
   ],
   imports: [
     BrowserModule,
