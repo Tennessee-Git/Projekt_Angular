@@ -1,5 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
+import { Movie } from '../models/Movie';
+import { Observable } from 'rxjs';
+import { Showing } from '../models/Showing';
+import { Room } from '../models/Rooms';
+import { Reservation } from '../models/Reservation';
 
 @Injectable({
   providedIn: 'root'
@@ -11,29 +16,45 @@ export class APIService {
     this.URL = 'http://localhost:3006';
    }
 
-  //GET
-  getMovies() {
-    return this.http.get(this.URL+'/filmy');
+  //GET -------------------------------------------
+  getMovies(): Observable<Movie[]> {
+    return this.http.get<Movie[]>(this.URL+'/filmy');
   }
 
-  getMovieById(id:number) {
-    this.http.get(this.URL + '/filmy/' + id);
+  getMovieById(id:number): Observable<Movie> {
+    return this.http.get<Movie>(this.URL + '/filmy/' + id);
   }
 
   getShowings() {
-
+    return this.http.get<Showing[]>(this.URL + '/seanse');
   }
 
-  getShowingById(id:number) {
-    this.http.get(this.URL + '/seanse/' + id);
+  getShowingById(id:number): Observable<Showing> {
+    return this.http.get<Showing>(this.URL + '/seanse/' + id);
   }
 
-  getRooms() {
-
+  getRooms(): Observable<Room[]> {
+    return this.http.get<Room[]>(this.URL + '/sale');
   }
-  //POST
 
-  //DELETE
+  //POST -------------------------------------------
+  addMovie(newMovie: Movie): Observable<Movie> {
+    return this.http.post<Movie>(this.URL + '/filmy', newMovie);
+  }
 
-  //PUT
+  addShowing(newShowing: Showing): Observable<Showing> {
+    return this.http.post<Showing>(this.URL + '/seanse', newShowing);
+  }
+
+  addReservation(newReservation: Reservation): Observable<Reservation> {
+    return this.http.post<Reservation>(this.URL + '/rezerwacje', newReservation);
+  }
+
+  //DELETE -------------------------------------------
+  deleteMovie(id:number){
+    this.http.delete(this.URL + '/filmy/' + id)
+  }
+
+  //PUT -------------------------------------------
+
 }

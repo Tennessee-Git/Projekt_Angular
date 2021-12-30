@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { APIService } from 'src/app/API/api.service';
+import { Movie } from 'src/app/models/Movie';
 
 @Component({
   selector: 'app-movies-page',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./movies-page.component.css']
 })
 export class MoviesPageComponent implements OnInit {
-
-  constructor() { }
+  // singleMovie!: Movie;
+  constructor(
+    //private api: APIService
+    ) { }
 
   ngOnInit(): void {
+    // this.api.getMovieById(1).subscribe(result => this.singleMovie = result);
   }
 
 }

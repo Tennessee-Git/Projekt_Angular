@@ -1,9 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-movie-details',
+  selector: 'movie-details',
   templateUrl: './movie-details.component.html',
-  styleUrls: ['./movie-details.component.css']
+  styleUrls: ['../movie-components.css']
 })
 export class MovieDetailsComponent implements OnInit {
   @Input() id !: number;

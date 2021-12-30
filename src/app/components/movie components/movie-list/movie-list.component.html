@@ -1,1 +1,8 @@
-<p>movie-list works!</p>
+<div class="card-container">
+  <div class="movie-grid">
+    <div *ngFor="let movie of movies">
+      <movie-details  [id]="movie.id" [title]="movie.title" [imageURL]="movie.imageURL">
+      </movie-details>
+    </div>
+  </div>
+</div>
