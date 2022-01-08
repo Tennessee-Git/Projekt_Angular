@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 import { Movie } from '../models/Movie';
-import { Observable } from 'rxjs';
+import { catchError, Observable, of } from 'rxjs';
 import { Showing } from '../models/Showing';
 import { Room } from '../models/Rooms';
 import { Reservation } from '../models/Reservation';
@@ -25,7 +25,7 @@ export class APIService {
     return this.http.get<Movie>(this.URL + '/filmy/' + id);
   }
 
-  getShowings() {
+  getShowings(): Observable<Showing[]> {
     return this.http.get<Showing[]>(this.URL + '/seanse');
   }
 

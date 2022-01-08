@@ -15,6 +15,6 @@ export class MovieControlsComponent implements OnInit {
   }
   delete(): void{
     console.log("Usuwanie filmu " + this.id);
-    this.api.deleteMovie(this.id);
+    //this.api.deleteMovie(this.id);
   }
 }

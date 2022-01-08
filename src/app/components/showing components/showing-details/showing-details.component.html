@@ -1,0 +1,20 @@
+<div class="showing-card">
+  <div class="showing-details">
+    <div class="showing-date">{{date}}</div>
+    <div class="movie-title">{{movieTitle}}</div>
+    <div class="showing-room">Sala {{roomId}}</div>
+    <div class="showing-seats">{{availableSeats}} wolnych miejsc</div>
+  </div>
+  <div class="overlay">
+    <div class="inner-card-controls">
+      <button class="ctrl-btn">
+        <a routerLink="/EdytujSeans/{{id}}" class="ctrl-btn">
+          <i class="far fa-edit"></i>
+        </a>
+      </button>
+      <button class="ctrl-btn">
+        <a routerLink="/Rezerwuj/{{id}}"  class="ctrl-btn">Rezerwuj <i class="fas fa-ticket-alt"></i></a>
+      </button>
+    </div>
+  </div>
+</div>

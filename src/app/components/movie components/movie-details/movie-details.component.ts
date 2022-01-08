@@ -14,5 +14,8 @@ export class MovieDetailsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  delete(): void{
+    console.log("Usuwanie filmu " + this.id);
+    //this.api.deleteMovie(this.id);
+  }
 }

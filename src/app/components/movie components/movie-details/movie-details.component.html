@@ -1,6 +1,16 @@
 <div class="movie-card">
   <img [src]="imageURL" alt="Plakat"/>
   <div class="overlay">
-    <movie-controls [title]="title" [id]="id"></movie-controls>
+    <div class="inner-card-controls">
+      <button class="ctrl-btn">
+        <a routerLink="/EdytujFilm/{{id}}" class="ctrl-btn">
+        <i class="far fa-edit"></i>
+      </a>
+      </button>
+      <button class="ctrl-btn" (click)="delete()"><!-- Brak onclick -->
+        <i class="far fa-trash-alt"></i>
+      </button>
+      <div class="movie-title">{{title}}</div>
+    </div>
   </div>
 </div>

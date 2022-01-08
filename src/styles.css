@@ -90,3 +90,7 @@ code {
   text-shadow:rgb(255, 255, 255) 1px 1px 5px;
   cursor: pointer;
 }
+
+a {
+  text-decoration: none;
+}

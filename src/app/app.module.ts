@@ -15,6 +15,8 @@ import { MovieDetailsComponent } from './components/movie components/movie-detai
 import { MovieControlsComponent } from './components/movie components/movie-controls/movie-controls.component';
 import { EditMovieFormComponent } from './components/forms/edit-movie-form/edit-movie-form.component';
 import { MovieListComponent } from './components/movie components/movie-list/movie-list.component';
+import { ShowingListComponent } from './components/showing components/showing-list/showing-list.component';
+import { ShowingDetailsComponent } from './components/showing components/showing-details/showing-details.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { MovieListComponent } from './components/movie components/movie-list/mov
     MovieDetailsComponent,
     MovieControlsComponent,
     EditMovieFormComponent,
-    MovieListComponent
+    MovieListComponent,
+    ShowingListComponent,
+    ShowingDetailsComponent
   ],
   imports: [
     BrowserModule,
