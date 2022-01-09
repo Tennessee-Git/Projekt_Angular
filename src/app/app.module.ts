@@ -17,6 +17,10 @@ import { EditMovieFormComponent } from './components/forms/edit-movie-form/edit-
 import { MovieListComponent } from './components/movie components/movie-list/movie-list.component';
 import { ShowingListComponent } from './components/showing components/showing-list/showing-list.component';
 import { ShowingDetailsComponent } from './components/showing components/showing-details/showing-details.component';
+import { EditShowingFormComponent } from './components/forms/edit-showing-form/edit-showing-form.component';
+import { AddMovieFormComponent } from './components/forms/add-movie-form/add-movie-form.component';
+import { AddShowingFormComponent } from './components/forms/add-showing-form/add-showing-form.component';
+import { ReservationFormComponent } from './components/forms/reservation-form/reservation-form.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,11 @@ import { ShowingDetailsComponent } from './components/showing components/showing
     EditMovieFormComponent,
     MovieListComponent,
     ShowingListComponent,
-    ShowingDetailsComponent
+    ShowingDetailsComponent,
+    EditShowingFormComponent,
+    AddMovieFormComponent,
+    AddShowingFormComponent,
+    ReservationFormComponent
   ],
   imports: [
     BrowserModule,
