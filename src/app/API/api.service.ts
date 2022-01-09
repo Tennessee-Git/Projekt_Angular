@@ -46,6 +46,11 @@ export class APIService {
     .pipe(catchError(this.handleError));
   }
 
+  getRoomById(id: number): Observable<Room> {
+    return this.http.get<Room>(this.URL + '/sale/' + id)
+    .pipe(catchError(this.handleError));
+  }
+
   //POST -------------------------------------------
   addMovie(newMovie: Movie): Observable<Movie> {
     return this.http.post<Movie>(this.URL + '/filmy', newMovie)

@@ -21,6 +21,7 @@ import { EditShowingFormComponent } from './components/forms/edit-showing-form/e
 import { AddMovieFormComponent } from './components/forms/add-movie-form/add-movie-form.component';
 import { AddShowingFormComponent } from './components/forms/add-showing-form/add-showing-form.component';
 import { ReservationFormComponent } from './components/forms/reservation-form/reservation-form.component';
+import { RoomComponent } from './components/room/room.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ReservationFormComponent } from './components/forms/reservation-form/re
     EditShowingFormComponent,
     AddMovieFormComponent,
     AddShowingFormComponent,
-    ReservationFormComponent
+    ReservationFormComponent,
+    RoomComponent
   ],
   imports: [
     BrowserModule,

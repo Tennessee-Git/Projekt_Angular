@@ -1,1 +1,10 @@
-<p>reservation-form works!</p>
+<div>
+  <h4>Informacje o seansie:</h4>
+  <p>Film: {{movieTitle}}</p>
+  <p>Sala: {{roomId}}</p>
+  <p>Data: {{date}}</p>
+
+  <room [capacity]="capacity" [seatsTaken]="seatsTaken" [setSelectedSeat]="setSelectedSeat"></room>
+  <button class="AddBtn" (click)="handleSubmit()">Rezerwuj</button>
+</div>
+
