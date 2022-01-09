@@ -31,7 +31,7 @@
 .showing-card:hover .inner-card-controls {
   opacity: 1;
   visibility: visible;
-  transition: all 0.4s ease-in;
+  transition: all 0.4s ease;
   position: absolute;
 }
 

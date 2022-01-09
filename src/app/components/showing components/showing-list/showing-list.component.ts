@@ -12,8 +12,12 @@ export class ShowingListComponent implements OnInit {
   constructor(private api: APIService) { }
 
   ngOnInit(): void {
-    this.api.getShowings().subscribe(data => this.showings = data);
-    console.log(this.showings);
+    this.getShowings();
   }
 
+  getShowings(){
+    this.api.getShowings().subscribe((data) => {
+      this.showings = data;
+      console.log(data);});
+  }
 }

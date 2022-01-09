@@ -12,8 +12,17 @@ export class MovieListComponent implements OnInit {
   constructor(private api: APIService) { }
 
   ngOnInit(): void {
-    this.api.getMovies().subscribe(data => this.movies = data);
-    console.log(this.movies);
+    this.getMovies();
   }
 
+  getMovies(){
+    this.api.getMovies().subscribe((data) => {
+      this.movies = data;
+      console.log(data); });
+  }
+
+  delete = (id: number) : void => {
+    console.log(`Delete ${id} from movie list`);
+    this.api.deleteMovie(id).subscribe((response) => { this.getMovies() });
+  }
 }

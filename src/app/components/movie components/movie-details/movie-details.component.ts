@@ -9,13 +9,15 @@ export class MovieDetailsComponent implements OnInit {
   @Input() id !: number;
   @Input() title !: string;
   @Input() imageURL !: string;
+  @Input()deleteFunction!: (id: number) => void;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-  delete(): void{
-    console.log("Usuwanie filmu " + this.id);
-    //this.api.deleteMovie(this.id);
+
+  delete():void{
+    this.deleteFunction(this.id);
   }
+
 }
