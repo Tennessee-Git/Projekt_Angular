@@ -1,8 +1,13 @@
 <div class="card-container">
   <div class="movie-grid">
     <div *ngFor="let showing of showings">
-      <showing-details [id]="showing.id" [date]="showing.date" [roomId]="showing.roomId" [movieTitle]="showing.movieTitle" [availableSeats]="showing.availableSeats">
+      <p>{{showing.Id}}--</p>
+      <showing-details [id]="showing.Id" [date]="showing.Date" [roomId]="showing.RoomId" [movieTitle]="showing.MovieTitle" [availableSeats]="showing.AvailableSeats">
       </showing-details>
     </div>
+    <!-- <div *ngFor="let showing of showings">
+      <showing-details [id]="showing.Id" [date]="showing.Date" [roomId]="showing.RoomId" [movieTitle]="showing.MovieTitle" [availableSeats]="showing.AvailableSeats">
+      </showing-details>
+    </div> -->
   </div>
 </div>

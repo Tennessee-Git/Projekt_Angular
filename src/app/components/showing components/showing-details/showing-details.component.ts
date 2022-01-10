@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Showing } from 'src/app/models/Showing';
 
 @Component({
   selector: 'showing-details',
@@ -11,6 +12,7 @@ export class ShowingDetailsComponent implements OnInit {
   @Input() movieTitle !: string;
   @Input() roomId !: number;
   @Input() availableSeats !: number;
+  @Input() showing !:Showing;
 
   constructor() { }
 

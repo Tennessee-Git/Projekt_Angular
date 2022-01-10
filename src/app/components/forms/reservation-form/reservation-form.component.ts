@@ -12,7 +12,7 @@ import { Showing } from 'src/app/models/Showing';
 export class ReservationFormComponent implements OnInit {
   selectedSeat: string = "";
   id : number = -1;
-  showing !: Showing;
+  showing!: Showing;
   movieTitle !: string;
   roomId !: number;
   date !: string;
@@ -25,11 +25,13 @@ export class ReservationFormComponent implements OnInit {
     this.route.paramMap.subscribe(params => this.id = Number(params.get('id')));
     this.api.getShowingById(this.id).subscribe((data) => {
       this.showing = data;
-      this.date = this.showing.date;
-      this.movieTitle = this.showing.movieTitle;
-      this.roomId = this.showing.roomId;
-      this.seatsTaken = this.showing.seatsTaken;
-      this.api.getRoomById(this.roomId).subscribe((response) => {
+      this.date = this.showing.Date;
+      console.log(this.showing);
+      this.movieTitle = this.showing.MovieTitle;
+      this.roomId = this.showing.RoomId;
+      this.seatsTaken = this.showing.SeatsTaken;
+      console.log("test");
+      this.api.getRoomById(this.roomId).subscribe((response) => { // do poprawy
         var room = response;
         this.capacity = room.capacity;
       });

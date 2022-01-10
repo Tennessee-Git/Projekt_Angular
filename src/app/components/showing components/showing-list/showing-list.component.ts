@@ -8,7 +8,7 @@ import { Showing } from 'src/app/models/Showing';
   styleUrls: ['../showing-components.css']
 })
 export class ShowingListComponent implements OnInit {
-  showings !: Showing[];
+  showings: Showing[] = new Array<Showing>();
   constructor(private api: APIService) { }
 
   ngOnInit(): void {
@@ -18,6 +18,6 @@ export class ShowingListComponent implements OnInit {
   getShowings(){
     this.api.getShowings().subscribe((data) => {
       this.showings = data;
-      console.log(data);});
+      console.log(this.showings);});
   }
 }
