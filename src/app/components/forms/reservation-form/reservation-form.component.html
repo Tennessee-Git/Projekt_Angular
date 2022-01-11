@@ -1,10 +1,42 @@
-<div>
-  <h4>Informacje o seansie:</h4>
-  <p>Film: {{movieTitle}}</p>
-  <p>Sala: {{roomId}}</p>
-  <p>Data: {{date}}</p>
+<div class="form-wrapper">
+  <div>
+    <h4>Informacje o seansie:</h4>
+    <p>Film: {{movieTitle}}</p>
+    <p>Sala: {{roomId}}</p>
+    <p>Data: {{date}}</p>
+  </div>
+  <br/>
+  <form #f="ngForm" (ngSubmit)="handleSubmit(f.value)">
 
+    <div class="form-inputs-small">
+      <label>Imię</label>
+      <input type="text" name="name" placeholder="Podaj imię" minlength="3" ngModel #name="ngModel" required/>
+      <div *ngIf="name.invalid && name.touched" class="error-msg">
+        <div *ngIf="name.errors?.['minlength']" >Imię musi mieć co najmniej 3 litery!</div>
+        <div *ngIf="name.errors?.['required']" >Imię jest wymagane!</div>
+      </div>
+    </div>
+
+    <div class="form-inputs-small">
+      <label>Nazwisko</label>
+      <input type="text" name="lastName" placeholder="Podaj nazwisko" ngModel #lastName="ngModel" required minlength="5"/>
+      <div *ngIf="lastName.invalid && lastName.touched">
+        <div *ngIf="lastName.errors?.['minlength']" class="error-msg">Nazwisko musi mieć co najmniej 5 liter!</div>
+        <div *ngIf="lastName.errors?.['required']" class="error-msg">Nazwisko jest wymagane!</div>
+      </div>
+    </div>
+
+    <div class="form-inputs-small">
+      <label>E-mail</label>
+      <input type="email" name="Email" placeholder="Podaj email" ngModel #Email="ngModel" required [email]="true">
+      <div *ngIf="Email.invalid && Email.touched">
+        <div *ngIf="Email.errors?.['required']" class="error-msg">E-mail jest wymagany!</div>
+        <div *ngIf="Email.errors?.['email']" class="error-msg">To nie jest właściwy e-mail!</div>
+      </div>
+    </div>
+
+  </form>
   <room [capacity]="capacity" [seatsTaken]="seatsTaken" [setSelectedSeat]="setSelectedSeat"></room>
-  <button class="AddBtn" (click)="handleSubmit()">Rezerwuj</button>
+  <button [disabled]="!f.valid" class="AddBtn" (click)="handleSubmit(f.value)">Rezerwuj</button>
 </div>
 

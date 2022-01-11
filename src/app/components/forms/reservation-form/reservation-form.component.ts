@@ -7,7 +7,7 @@ import { Showing } from 'src/app/models/Showing';
 @Component({
   selector: 'app-reservation-form',
   templateUrl: './reservation-form.component.html',
-  styleUrls: ['./reservation-form.component.css']
+  styleUrls: ['../form-components.css']
 })
 export class ReservationFormComponent implements OnInit {
   selectedSeat: string = "";
@@ -37,8 +37,8 @@ export class ReservationFormComponent implements OnInit {
 
   }
 
-  handleSubmit():void{
-    console.log("Reservation");
+  handleSubmit(formValues:object){
+    console.log(formValues);
   }
 
   setSelectedSeat =(seatCode: string) : void => {

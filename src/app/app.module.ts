@@ -22,6 +22,7 @@ import { AddMovieFormComponent } from './components/forms/add-movie-form/add-mov
 import { AddShowingFormComponent } from './components/forms/add-showing-form/add-showing-form.component';
 import { ReservationFormComponent } from './components/forms/reservation-form/reservation-form.component';
 import { RoomComponent } from './components/room/room.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { RoomComponent } from './components/room/room.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
