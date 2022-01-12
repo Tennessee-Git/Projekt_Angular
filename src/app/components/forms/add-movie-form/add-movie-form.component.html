@@ -1,1 +1,36 @@
-<p>add-movie-form works!</p>
+<div class="form-wrapper">
+  <h2>Wpisz informacje o filmie</h2>
+  <br/>
+
+  <form #addF="ngForm" (ngSubmit)="handleSubmit(addF.value)">
+
+    <div class="form-inputs">
+      <label>Tytuł:</label>
+      <input type="text" name="title" placeholder="Podaj tytuł" minlength="5" ngModel #title="ngModel" required />
+      <div *ngIf="title.invalid && title.touched" class="error-msg">
+        <div *ngIf="title.errors?.['minlength']">Tytuł filmu musi mieć co najmniej 5 liter!</div>
+        <div *ngIf="title.errors?.['required']"> Tytuł jest wymagany!</div>
+      </div>
+    </div>
+
+    <div class="form-inputs">
+      <label>Link do plakatu:</label>
+      <input type="url" name="imageURL" placeholder="Podaj link do plakatu" pattern="https://.*" ngModel #imageURL="ngModel" required />
+      <div *ngIf="imageURL.invalid && imageURL.touched" class="error-msg">
+        <div *ngIf="imageURL.errors?.['pattern']">To nie jest właściwy adres url!</div>
+        <div *ngIf="imageURL.errors?.['required']"> Link do plakatu jest wymagany!</div>
+      </div>
+    </div>
+
+    <div class="form-inputs">
+      <label>Długość:</label>
+      <input type="number" name="length" placeholder="Podaj długość filmu" min="30" ngModel #length="ngModel" required />
+      <div *ngIf="length.invalid && length.touched" class="error-msg">
+        <div *ngIf="length.errors?.['min']">Film musi trwać co najmniej 30 minut!</div>
+        <div *ngIf="length.errors?.['required']"> Długość jest wymagana!</div>
+      </div>
+    </div>
+
+  </form>
+  <button [disabled]="!addF.valid" class="AddBtn" (click)="handleSubmit(addF.value)">Dodaj</button>
+</div>

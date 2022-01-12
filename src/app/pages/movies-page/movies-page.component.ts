@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { APIService } from 'src/app/API/api.service';
-import { Movie } from 'src/app/models/Movie';
+import { MatDialog } from '@angular/material/dialog';
+import { AddMovieFormComponent } from 'src/app/components/forms/add-movie-form/add-movie-form.component';
 
 @Component({
   selector: 'app-movies-page',
@@ -8,13 +8,12 @@ import { Movie } from 'src/app/models/Movie';
   styleUrls: ['./movies-page.component.css']
 })
 export class MoviesPageComponent implements OnInit {
-  // singleMovie!: Movie;
-  constructor(
-    //private api: APIService
-    ) { }
+  constructor(private matDialog: MatDialog) { }
 
   ngOnInit(): void {
-    // this.api.getMovieById(1).subscribe(result => this.singleMovie = result);
   }
 
+  openDialog():void {
+    let dialogRef = this.matDialog.open(AddMovieFormComponent);
+  }
 }

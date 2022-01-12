@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { AddShowingFormComponent } from 'src/app/components/forms/add-showing-form/add-showing-form.component';
 
 @Component({
   selector: 'app-showings-page',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./showings-page.component.css']
 })
 export class ShowingsPageComponent implements OnInit {
-
-  constructor() { }
+  constructor(private matDialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
+  openDialog():void {
+    let dialogRef = this.matDialog.open(AddShowingFormComponent);
+  }
 }

@@ -1,1 +1,33 @@
-<p>add-showing-form works!</p>
+<div class="form-wrapper">
+  <h2>Wpisz informacje o seansie</h2>
+  <br/>
+
+  <form #addSF="ngForm" (ngSubmit)="handleSubmit(addSF.value)">
+
+    <div class="form-inputs">
+
+      <div class="error-msg">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <div class="form-inputs">
+
+      <div class="error-msg">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <div class="form-inputs">
+
+      <div class="error-msg">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+  </form>
+  <button [disabled]="!addSF.valid" class="AddBtn" (click)="handleSubmit(addSF.value)">Dodaj</button>
+</div>

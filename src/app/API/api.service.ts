@@ -27,6 +27,12 @@ export class APIService {
     .pipe(catchError(this.handleError));
   }
 
+  getMovieCount(): void{ // do zrobienia
+    let number;
+    const res = this.http.get(this.URL + '/filmy');
+    console.log(res);
+  }
+
   getShowings(): Observable<Showing[]> {
     return this.http.get<Showing[]>(this.URL + '/seanse')
     .pipe(catchError(this.handleError));
@@ -52,8 +58,8 @@ export class APIService {
   }
 
   //POST -------------------------------------------
-  addMovie(newMovie: Movie): Observable<Movie> {
-    return this.http.post<Movie>(this.URL + '/filmy', newMovie)
+  addMovie(newMovie: object): Observable<object> {
+    return this.http.post<object>(this.URL + '/filmy', newMovie)
     .pipe(catchError(this.handleError));
   }
 

@@ -1,9 +1,11 @@
-export interface Showing{
-  id :number,
-  date :string,
-  movieId :number,
-  movieTitle :string,
-  roomId :number,
-  availableSeats :number,
-  seatsTaken :string[];
+export class Showing{
+  constructor(
+  public id :number,
+  public date :string,
+  public movieId :number,
+  public movieTitle :string,
+  public roomId :number,
+  public availableSeats :number,
+  public seatsTaken :string[])
+  {}
 }

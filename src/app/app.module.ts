@@ -23,6 +23,8 @@ import { AddShowingFormComponent } from './components/forms/add-showing-form/add
 import { ReservationFormComponent } from './components/forms/reservation-form/reservation-form.component';
 import { RoomComponent } from './components/room/room.component';
 import { FormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
+import { APIService } from './API/api.service';
 
 @NgModule({
   declarations: [
@@ -44,14 +46,19 @@ import { FormsModule } from '@angular/forms';
     ReservationFormComponent,
     RoomComponent
   ],
+  entryComponents: [
+    AddMovieFormComponent,
+    AddShowingFormComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
-  providers: [],
+  providers: [APIService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
