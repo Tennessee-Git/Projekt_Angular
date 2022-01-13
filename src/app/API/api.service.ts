@@ -27,12 +27,6 @@ export class APIService {
     .pipe(catchError(this.handleError));
   }
 
-  getMovieCount(): void{ // do zrobienia
-    let number;
-    const res = this.http.get(this.URL + '/filmy');
-    console.log(res);
-  }
-
   getShowings(): Observable<Showing[]> {
     return this.http.get<Showing[]>(this.URL + '/seanse')
     .pipe(catchError(this.handleError));
@@ -80,7 +74,15 @@ export class APIService {
   }
 
   //PUT -------------------------------------------
+  editMovie(movie2Edit: object, id: number): Observable<object> {
+    return this.http.put(this.URL + '/filmy/' + id, movie2Edit)
+      .pipe(catchError(this.handleError));
+  }
 
+  editShowing(showing2Edit: object, id: number): Observable<object> {
+    return this.http.put(this.URL + '/seanse/' + id, showing2Edit)
+      .pipe(catchError(this.handleError));
+    }
 
   //ERROR -----------------------------------------
   handleError(error: HttpErrorResponse) {

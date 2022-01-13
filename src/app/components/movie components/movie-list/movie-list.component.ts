@@ -1,5 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { APIService } from 'src/app/API/api.service';
+import { CommunicatorService } from 'src/app/API/communicator.service';
 import { Movie } from 'src/app/models/Movie';
 
 @Component({
@@ -7,12 +9,21 @@ import { Movie } from 'src/app/models/Movie';
   templateUrl: './movie-list.component.html',
   styleUrls: ['../movie-components.css']
 })
-export class MovieListComponent implements OnInit {
+export class MovieListComponent implements OnInit, OnDestroy {
   movies !: Movie[];
-  constructor(private api: APIService) { }
+  subscription!: Subscription;
+  constructor(private api: APIService, private com: CommunicatorService) { }
 
   ngOnInit(): void {
     this.getMovies();
+    this.subscription = this.com.message$.subscribe((message) =>{
+      if(message == "reloadMovie")
+        this.getMovies();
+    })
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 
   getMovies(){

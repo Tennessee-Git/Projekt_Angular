@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { APIService } from 'src/app/API/api.service';
+import { CommunicatorService } from 'src/app/API/communicator.service';
 import { Showing } from 'src/app/models/Showing';
 
 @Component({
@@ -7,12 +9,21 @@ import { Showing } from 'src/app/models/Showing';
   templateUrl: './showing-list.component.html',
   styleUrls: ['../showing-components.css']
 })
-export class ShowingListComponent implements OnInit {
+export class ShowingListComponent implements OnInit, OnDestroy {
   showings !: Showing[];
-  constructor(private api: APIService) { }
+  subscription !: Subscription;
+  constructor(private api: APIService, private com: CommunicatorService) { }
 
   ngOnInit(): void {
     this.getShowings();
+    this.subscription = this.com.message$.subscribe((message) => {
+      if(message == "reloadShowing")
+      this.getShowings();
+    })
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 
   getShowings(){

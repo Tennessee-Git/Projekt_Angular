@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { APIService } from 'src/app/API/api.service';
+import { CommunicatorService } from 'src/app/API/communicator.service';
+import { Reservation } from 'src/app/models/Reservation';
 import { Room } from 'src/app/models/Rooms';
 import { Showing } from 'src/app/models/Showing';
 
@@ -19,7 +21,12 @@ export class ReservationFormComponent implements OnInit {
   capacity !: number;
   seatsTaken !: string[];
 
-  constructor(private route: ActivatedRoute, private api: APIService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private api: APIService,
+    private com: CommunicatorService,
+    private router: Router
+    ) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => this.id = Number(params.get('id')));
@@ -37,8 +44,10 @@ export class ReservationFormComponent implements OnInit {
 
   }
 
-  handleSubmit(formValues:object){
+  handleSubmit(formValues:Reservation){
     console.log(formValues);
+
+    this.router.navigate(['/Seanse']);
   }
 
   setSelectedSeat =(seatCode: string) : void => {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
+import { CommunicatorService } from 'src/app/API/communicator.service';
 
 @Component({
   selector: 'app-add-showing-form',
@@ -8,7 +9,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class AddShowingFormComponent implements OnInit {
 
-  constructor(private dialogRef: MatDialogRef<AddShowingFormComponent>) { }
+  constructor(private dialogRef: MatDialogRef<AddShowingFormComponent>, private com: CommunicatorService) { }
 
   ngOnInit(): void {
   }
@@ -16,5 +17,6 @@ export class AddShowingFormComponent implements OnInit {
   handleSubmit(formValues: object){
     console.log(formValues);
     this.dialogRef.close();
+    this.com.SendMessage("reloadShowing");
   }
 }
