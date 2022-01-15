@@ -11,9 +11,6 @@ import { Movie } from 'src/app/models/Movie';
 export class EditMovieFormComponent implements OnInit {
   id: number = -1;
   movie!: Movie;
-  oldTitle: string = "";
-  oldImageURL: string = "";
-  oldLength: number = -1;
 
   constructor(
     private route: ActivatedRoute,
@@ -35,7 +32,7 @@ export class EditMovieFormComponent implements OnInit {
     this.movie.title = formValues.title;
     this.movie.length = formValues.length;
     this.movie.label = formValues.title;
-    this.api.editMovie(this.movie, this.movie.id).subscribe((response)=> {
+    this.api.editMovie(this.movie, this.id).subscribe((response)=> {
       console.log(response);
       this.router.navigate(['/Filmy']);
     });

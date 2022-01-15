@@ -19,7 +19,6 @@ export class AddMovieFormComponent implements OnInit, OnDestroy {
     this.subscription = this.api.getMovies().subscribe((data)=> {
       var movies: Movie[] = data;
       this.value = movies[data.length-1].id+1;
-      console.log(this.value);
     });
   }
 

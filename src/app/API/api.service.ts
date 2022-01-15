@@ -52,17 +52,17 @@ export class APIService {
   }
 
   //POST -------------------------------------------
-  addMovie(newMovie: object): Observable<object> {
-    return this.http.post<object>(this.URL + '/filmy', newMovie)
+  addMovie(newMovie: object): Observable<Movie> {
+    return this.http.post<Movie>(this.URL + '/filmy', newMovie)
     .pipe(catchError(this.handleError));
   }
 
-  addShowing(newShowing: Showing): Observable<Showing> {
+  addShowing(newShowing: object): Observable<Showing> {
     return this.http.post<Showing>(this.URL + '/seanse', newShowing)
     .pipe(catchError(this.handleError));
   }
 
-  addReservation(newReservation: Reservation): Observable<Reservation> {
+  addReservation(newReservation: object): Observable<Reservation> {
     return this.http.post<Reservation>(this.URL + '/rezerwacje', newReservation)
     .pipe(catchError(this.handleError));
   }

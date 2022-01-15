@@ -4,6 +4,7 @@ import { APIService } from 'src/app/API/api.service';
 import { CommunicatorService } from 'src/app/API/communicator.service';
 import { Movie } from 'src/app/models/Movie';
 import { Room } from 'src/app/models/Rooms';
+import { Showing } from 'src/app/models/Showing';
 
 @Component({
   selector: 'app-add-showing-form',
@@ -13,7 +14,7 @@ import { Room } from 'src/app/models/Rooms';
 export class AddShowingFormComponent implements OnInit {
   movies!: Movie[];
   rooms!: Room[];
-  minDate = new Date();
+  minDate:Date = new Date();
 
   constructor(private dialogRef: MatDialogRef<AddShowingFormComponent>, private com: CommunicatorService, private api: APIService) { }
 
@@ -26,9 +27,20 @@ export class AddShowingFormComponent implements OnInit {
     })
   }
 
-  handleSubmit(formValues: object){
-    console.log(formValues);
+  handleSubmit(formValues: Showing){
+    let newShowing = {
+      date: formValues.date,
+      movieId: formValues.movieId,
+      roomId: formValues.roomId,
+      movieTitle: this.movies.find((movie) => movie.id === formValues.movieId)?.title,
+      availableSeats: this.rooms.find((room) => room.id === formValues.roomId)?.capacity,
+      seatsTaken: []
+    }
+    console.log(newShowing);
+    // this.api.addShowing(newShowing).subscribe((response) => {
+    //   console.log(response);
+    //   this.com.SendMessage("reloadShowing");
+    // });
     this.dialogRef.close();
-    this.com.SendMessage("reloadShowing");
   }
 }
