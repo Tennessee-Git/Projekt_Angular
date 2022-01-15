@@ -11,8 +11,8 @@ import { Movie } from 'src/app/models/Movie';
   styleUrls: ['../form-components.css']
 })
 export class AddMovieFormComponent implements OnInit, OnDestroy {
-  value!: number;
-  subscription !: Subscription;
+  private value!: number;
+  private subscription !: Subscription;
   constructor(private dialogRef: MatDialogRef<AddMovieFormComponent>, private api: APIService, private com: CommunicatorService) { }
 
   ngOnInit(): void {

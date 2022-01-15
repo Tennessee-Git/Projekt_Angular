@@ -5,25 +5,39 @@
   <form #addSF="ngForm" (ngSubmit)="handleSubmit(addSF.value)">
 
     <div class="form-inputs">
-
-      <div class="error-msg">
-        <div></div>
-        <div></div>
+      <label>Film:</label>
+      <mat-form-field appearance="outline">
+        <mat-select name="movie" ngModel #movie="ngModel" placeholder="Wybierz film" required>
+          <mat-option *ngFor="let movie of movies" [value]="movie.value">
+            {{movie.label}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div *ngIf="movie.invalid && movie.touched" class="error-msg">
+        <div *ngIf="movie.errors?.['required']">Musisz wybrać film z listy!</div>
       </div>
     </div>
 
     <div class="form-inputs">
-
-      <div class="error-msg">
-        <div></div>
-        <div></div>
+      <label>Sala:</label>
+      <mat-form-field appearance="outline">
+        <mat-select name="room" ngModel #room="ngModel"placeholder="Wybierz salę" required>
+          <mat-option *ngFor="let room of rooms" [value]="room.value">
+            Sala {{room.value}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div *ngIf="room.invalid && room.touched" class="error-msg">
+        <div *ngIf="room.errors?.['required']">Musisz wybrać salę z listy!</div>
       </div>
     </div>
 
     <div class="form-inputs">
-
+      <label>Data seansu:</label>
+        <!-- <input matInput [matDatepicker]="picker" name="date" [min]="minDate" ngModel #date="ngModel">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker> -->
       <div class="error-msg">
-        <div></div>
         <div></div>
       </div>
     </div>

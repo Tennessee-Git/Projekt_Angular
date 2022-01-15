@@ -6,7 +6,7 @@ import { Showing } from 'src/app/models/Showing';
 @Component({
   selector: 'app-edit-showing-form',
   templateUrl: './edit-showing-form.component.html',
-  styleUrls: ['./edit-showing-form.component.css']
+  styleUrls: ['../form-components.css']
 })
 export class EditShowingFormComponent implements OnInit {
   id: number = -1;

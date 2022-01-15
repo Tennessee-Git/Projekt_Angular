@@ -24,6 +24,9 @@ import { ReservationFormComponent } from './components/forms/reservation-form/re
 import { RoomComponent } from './components/room/room.component';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSelectModule} from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 import { APIService } from './API/api.service';
 
 @NgModule({
@@ -56,9 +59,16 @@ import { APIService } from './API/api.service';
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
-  providers: [APIService],
+  providers: [
+    APIService,
+    MatDatepickerModule,
+    MatNativeDateModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
