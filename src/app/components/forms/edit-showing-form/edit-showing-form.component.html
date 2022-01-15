@@ -34,11 +34,10 @@
 
   <div class="form-inputs">
     <label>Aktualna data seansu: {{showing.date}}</label>
-      <!-- <mat-form-field appearance="outline">
-        <input matInput [matDatepicker]="picker" [min]="minDate">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field> -->
+    <input type="datetime-local" name="date" min="{{minDate}}" ngModel #date="ngModel" required>
+    <div *ngIf="date.invalid && date.touched" class="error-msg">
+      <div *ngIf="date.errors?.['required']">Musisz wybrać datę seansu!</div>
+    </div>
     <div class="error-msg">
       <div></div>
     </div>

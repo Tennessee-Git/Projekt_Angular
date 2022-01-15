@@ -4,6 +4,7 @@ import { APIService } from 'src/app/API/api.service';
 import { Movie } from 'src/app/models/Movie';
 import { Room } from 'src/app/models/Rooms';
 import { Showing } from 'src/app/models/Showing';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-edit-showing-form',
@@ -15,6 +16,7 @@ export class EditShowingFormComponent implements OnInit {
   showing!: Showing;
   movies!: Movie[];
   rooms!: Room[];
+  minDate!: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -32,19 +34,22 @@ export class EditShowingFormComponent implements OnInit {
     });
     this.api.getRooms().subscribe((response) => {
       this.rooms = response;
-    })
+    });
+    let date =  moment().format('YYYY-MM-DDTHH:mm');
+    this.minDate = date;
   }
 
   handleSubmit(formValues: Showing){
     console.log(formValues);
-    this.showing.date = "";
+    this.showing.date = moment(formValues.date).format('DD-MM-YYYY HH:mm');
     this.showing.movieId = formValues.movieId;
     this.showing.roomId = formValues.roomId;
     this.showing.movieTitle = String(this.movies.find(((movie) => movie.id === formValues.movieId))?.title);
+    this.showing.availableSeats = Number(this.rooms.find((room) => room.id === formValues.roomId)?.capacity);
     console.log(this.showing);
-    // this.api.editShowing(this.showing, this.id).subscribe((response)=> {
-    //   console.log(response);
-    //   this.router.navigate(['/Seanse']);
-    // });
+    this.api.editShowing(this.showing, this.id).subscribe((response)=> {
+      console.log(response);
+      this.router.navigate(['/Seanse']);
+    });
   }
 }

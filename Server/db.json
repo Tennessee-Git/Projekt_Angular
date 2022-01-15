@@ -119,12 +119,12 @@
   ],
   "seanse": [
     {
-      "date": "28.11.2021 19:00",
-      "movieId": 2,
-      "roomId": 2,
-      "movieTitle": "Test2",
+      "date": "15-01-2022 17:28",
+      "movieId": 1,
+      "roomId": 1,
+      "movieTitle": "Test1",
       "id": 2,
-      "availableSeats": 100,
+      "availableSeats": 90,
       "seatsTaken": []
     },
     {
@@ -247,6 +247,15 @@
       "availableSeats": 90,
       "seatsTaken": [],
       "id": 25
+    },
+    {
+      "date": "22-01-2022 17:22",
+      "movieId": 2,
+      "roomId": 2,
+      "movieTitle": "test2",
+      "availableSeats": 100,
+      "seatsTaken": [],
+      "id": 26
     }
   ],
   "rezerwacje": [
