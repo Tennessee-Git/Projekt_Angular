@@ -78,6 +78,7 @@ input::placeholder {
   flex-direction: row;
   margin-bottom: 15px;
   width: 100%;
+  justify-content: center;
 }
 
 .inline-image{
