@@ -8,19 +8,17 @@ import { Showing } from '../models/Showing';
 export class DateFilterPipe implements PipeTransform { // DO POPRAWY!!!!!!
 
   transform(items: Showing[]): Showing[] {
-    if(!items) {
-        return items;
-      }
-    const now = moment().format('YYYY-MM-DD HH:mm');
+    let output:Showing[]= [];
+    let now = moment().format();
     console.log(now);
-    return items.filter((item:Showing) => {
-      var date: string = moment(item.date).format('YYYY-MM-DD HH:mm');
-      if(moment(date).isSameOrAfter(now) === true)
-        {
-          console.log(item);
-          return item;
-        }
-      return null;
-    });
+    items.forEach((showing:Showing) => {
+      var tempMoment = moment(showing.date,'DD-MM-YYYY HH:mm');
+      tempMoment.format();
+      if(tempMoment.isSameOrAfter(now))
+      {
+        output.push(showing);
+      }
+    })
+    return output;
   }
 }

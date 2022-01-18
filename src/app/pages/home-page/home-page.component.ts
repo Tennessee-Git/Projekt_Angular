@@ -14,8 +14,7 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit(): void {
     this.api.getShowings().subscribe((data) => {
-      this.showings = data;
-      console.log(data);});
+      this.showings = data;});
   }
 
 }

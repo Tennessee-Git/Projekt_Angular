@@ -256,6 +256,15 @@
       "availableSeats": 100,
       "seatsTaken": [],
       "id": 26
+    },
+    {
+      "date": "18-01-2022 20:48",
+      "movieId": 4,
+      "roomId": 3,
+      "movieTitle": "test3",
+      "availableSeats": 80,
+      "seatsTaken": [],
+      "id": 27
     }
   ],
   "rezerwacje": [

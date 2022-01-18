@@ -9,37 +9,30 @@ export class RoomComponent implements OnInit {
   @Input() capacity !: number;
   @Input() seatsTaken !: string[];
   @Input() setSelectedSeat!: (seatCode: string) => void;
-  test:number = 0;
+  seatCodes:string[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.capacity);
+    this.seatCodes = this.createSeatCodes(this.capacity);
+    console.log(this.seatCodes);
   }
 
   handleClick() {
     this.setSelectedSeat("key");
   }
 
-  createSeatArray =() => {
-    let SeatArray = [];
-    let TakenSeats = this.seatsTaken;
-    for(let i = 0; i < this.capacity/10; i++)
+  createSeatCodes(capacity: number): string[]{
+    let array:string[] = []
+    for(let i = 0; i < capacity/10; i++)
     {
-      let children = [];
       let letter = String.fromCharCode(i+65);
-      for(let j = 1; j<11; j++)
+      for(let j = 1; j<11;j++)
       {
-        let _key = `${letter}-${j}`;
-        let temp = document.createElement("input");
-        temp.type = 'checkbox';
-        children.push(temp);
+        array.push(`${letter}-${j}`);
       }
-      SeatArray.push(children)
     }
-    return SeatArray;
-  }
-
-  testF(value: string):void{
-    console.log(value);
+    return array;
   }
 }

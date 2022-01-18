@@ -32,10 +32,6 @@ export class APIService {
     .pipe(catchError(this.handleError));
   }
 
-  // getShowingsNow(): Observable<Showing[]> {
-
-  // }
-
   getShowingById(id:number): Observable<Showing> {
     return this.http.get<Showing>(this.URL + '/seanse/' + id)
     .pipe(catchError(this.handleError));
