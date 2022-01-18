@@ -5,7 +5,7 @@ import { Showing } from '../models/Showing';
 @Pipe({
   name: 'dateFilter'
 })
-export class DateFilterPipe implements PipeTransform { // DO POPRAWY!!!!!!
+export class DateFilterPipe implements PipeTransform {
 
   transform(items: Showing[]): Showing[] {
     let output:Showing[]= [];
