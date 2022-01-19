@@ -4,7 +4,7 @@
 }
 
 .screen {
-  width: 350px;
+  width: 550px;
   background-color: #e4e4e4;
   color: #898989;
   font-weight: 700;
@@ -20,29 +20,8 @@
   cursor: default;
 }
 
-.seat {
-  background: #ff0000;
-  width: 3.84615%;
-  max-width: 27px;
-  max-height: 27px;
-  min-width: 22px;
-  min-width: 22px;
-  display: inline-block;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  margin: 1px;
-  margin-right: 10px;
-}
-
 input[type="checkbox"]:disabled {
   cursor:default;
-}
-
-.seat:hover {
-  background: #323a69;
-  color: #f0fff0;
-  cursor: pointer;
 }
 
 .row-name {
@@ -63,6 +42,12 @@ input[type="checkbox"]:disabled {
   align-items: center;
   margin-bottom: 10px;
   width: 100%;
+}
+
+.seat-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  row-gap: 5px;
 }
 
 .room{

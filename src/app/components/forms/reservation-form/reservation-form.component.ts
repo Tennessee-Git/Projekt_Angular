@@ -12,7 +12,7 @@ import { Showing } from 'src/app/models/Showing';
   styleUrls: ['../form-components.css']
 })
 export class ReservationFormComponent implements OnInit {
-  selectedSeat: string = "";
+  selectedSeat: string = '';
   id : number = -1;
   showing !: Showing;
   movieTitle !: string;
@@ -45,7 +45,18 @@ export class ReservationFormComponent implements OnInit {
   }
 
   handleSubmit(formValues:Reservation){
-    console.log(formValues);
+    let newReservation = {
+      name: formValues.name,
+      lastName: formValues.lastName,
+      email: formValues.email,
+      seansId: this.id,
+      seatCode: this.selectedSeat
+    }
+    console.log(newReservation);
+    this.api.addReservation(newReservation).subscribe(response => console.log(response));
+    this.showing.availableSeats = this.showing.availableSeats -1;
+    this.showing.seatsTaken.push(this.selectedSeat);
+    this.api.editShowing(this.showing,this.id).subscribe();
 
     this.router.navigate(['/Seanse']);
   }

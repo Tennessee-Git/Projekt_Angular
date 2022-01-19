@@ -28,9 +28,10 @@
 
     <div class="form-inputs">
       <label>Aktualna długość(min): {{movie.length}}</label>
-      <input type="number" name="length" placeholder="Podaj długość filmu" min="30" ngModel #length="ngModel" required />
+      <input type="number" name="length" placeholder="Podaj długość filmu" min="30" max="300" ngModel #length="ngModel" required />
       <div *ngIf="length.invalid && length.touched" class="error-msg">
         <div *ngIf="length.errors?.['min']">Film musi trwać co najmniej 30 minut!</div>
+        <div *ngIf="length.errors?.['max']">Film może trwać maksymalnie 300 minut!</div>
         <div *ngIf="length.errors?.['required']"> Długość jest wymagana!</div>
       </div>
     </div>

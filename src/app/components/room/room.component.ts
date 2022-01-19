@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./room.component.css']
 })
 export class RoomComponent implements OnInit {
-  @Input() capacity !: number;
+  @Input("capacity") capacity : number=0;
   @Input() seatsTaken !: string[];
   @Input() setSelectedSeat!: (seatCode: string) => void;
   seatCodes:string[] = [];
@@ -14,13 +14,12 @@ export class RoomComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.capacity);
     this.seatCodes = this.createSeatCodes(this.capacity);
-    console.log(this.seatCodes);
   }
 
-  handleClick() {
-    this.setSelectedSeat("key");
+  handleClick(code:string) {
+    console.log(code);
+    this.setSelectedSeat(code);
   }
 
   createSeatCodes(capacity: number): string[]{
@@ -34,5 +33,12 @@ export class RoomComponent implements OnInit {
       }
     }
     return array;
+  }
+
+  seatTaken(code:string):boolean{
+    if(this.seatsTaken.includes(code))
+      return true;
+    else
+      return false;
   }
 }

@@ -214,11 +214,12 @@
       "movieId": 5,
       "roomId": 6,
       "id": 22,
-      "availableSeats": 77,
+      "availableSeats": 76,
       "seatsTaken": [
         "A-5",
         "A-3",
-        "C-8"
+        "C-8",
+        "A-1"
       ]
     },
     {
@@ -403,6 +404,14 @@
       "seansId": 22,
       "seatCode": "C-8",
       "id": 19
+    },
+    {
+      "name": "Paweł",
+      "lastName": "Awramiuk",
+      "email": "awramiukofficial@gmail.com",
+      "seansId": 22,
+      "seatCode": "A-1",
+      "id": 20
     }
   ]
 }

@@ -28,15 +28,16 @@
 
     <div class="form-inputs-small">
       <label>E-mail</label>
-      <input type="email" name="Email" placeholder="Podaj email" ngModel #Email="ngModel" required [email]="true">
-      <div *ngIf="Email.invalid && Email.touched">
-        <div *ngIf="Email.errors?.['required']" class="error-msg">E-mail jest wymagany!</div>
-        <div *ngIf="Email.errors?.['email']" class="error-msg">To nie jest właściwy e-mail!</div>
+      <input type="email" name="email" placeholder="Podaj email" ngModel #email="ngModel" required [email]="true">
+      <div *ngIf="email.invalid && email.touched">
+        <div *ngIf="email.errors?.['required']" class="error-msg">E-mail jest wymagany!</div>
+        <div *ngIf="email.errors?.['email']" class="error-msg">To nie jest właściwy e-mail!</div>
       </div>
     </div>
 
   </form>
-  <room [capacity]="capacity" [seatsTaken]="seatsTaken" [setSelectedSeat]="setSelectedSeat"></room>
-  <button [disabled]="!f.valid" class="AddBtn" (click)="handleSubmit(f.value)">Rezerwuj</button>
+  <room *ngIf="capacity" [capacity]="capacity" [seatsTaken]="seatsTaken" [setSelectedSeat]="setSelectedSeat"></room>
+  <br/>
+  <button [disabled]="!f.valid && selectedSeat==''" class="AddBtn" (click)="handleSubmit(f.value)">Rezerwuj</button>
 </div>
 
