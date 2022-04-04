@@ -1,3 +1,5 @@
+# PREZENTACJA PROJEKTU W PLIKU PrezentacjaANGULAR.pdf
+
 ### `TEMAT APLIKACJI:`
 Aplikacja do zarządzania seansami w kinie
 
