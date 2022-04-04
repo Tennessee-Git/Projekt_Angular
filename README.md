@@ -1,3 +1,16 @@
+### `TEMAT APLIKACJI:`
+Aplikacja do zarządzania seansami w kinie
+
+### `WYMAGANIA:`
+- dodawanie/usuwanie/edycja seansów
+- dodawanie/usuwanie/edycja filmów
+- rezerwacja biletów na seanse
+- wyświetlanie aktualnie trwających seansów
+- wyświetlanie tabeli/wykresu popularności filmów na podstawie liczby sprzedanych biletów
+
+### `NIEZREALIZOWANE FUNKCJONALNOŚCI:`
+- wyświetlanie tabeli/wykresu popularności filmów na podstawie liczby sprzedanych biletów
+
 # ProjektAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
