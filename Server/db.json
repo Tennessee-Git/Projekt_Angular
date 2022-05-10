@@ -106,15 +106,6 @@
       "value": 8,
       "popularity": 0,
       "id": 8
-    },
-    {
-      "title": "test51",
-      "imageURL": "https://przedszkole.doruchow.pl/wp-content/uploads/2017/08/test.png",
-      "length": 3131,
-      "label": "test51",
-      "value": 9,
-      "popularity": 0,
-      "id": 9
     }
   ],
   "seanse": [
@@ -136,8 +127,10 @@
       "movieId": 1,
       "roomId": 2,
       "id": 8,
-      "availableSeats": 100,
-      "seatsTaken": []
+      "availableSeats": 99,
+      "seatsTaken": [
+        "A-4"
+      ]
     },
     {
       "date": "28-11-2021 14:17",
@@ -281,6 +274,15 @@
         "I-2"
       ],
       "id": 28
+    },
+    {
+      "date": "11-05-2022 17:08",
+      "movieId": 6,
+      "roomId": 5,
+      "movieTitle": "asdas",
+      "availableSeats": 110,
+      "seatsTaken": [],
+      "id": 29
     }
   ],
   "rezerwacje": [
@@ -459,6 +461,14 @@
       "seansId": 2,
       "seatCode": "A-3",
       "id": 24
+    },
+    {
+      "name": "Paweł",
+      "lastName": "Awramiuk",
+      "email": "awramiukofficial@gmail.com",
+      "seansId": 8,
+      "seatCode": "A-4",
+      "id": 25
     }
   ]
 }
