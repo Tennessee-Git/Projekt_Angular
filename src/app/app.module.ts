@@ -32,6 +32,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { NgxMatDatetimePickerModule, NgxMatTimepickerModule, NgxNativeDateModule } from '@angular-material-components/datetime-picker';
 import { DateFilterPipe } from './Pipes/date-filter.pipe';
+import { RoomsPageComponent } from './pages/rooms-page/rooms-page.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { DateFilterPipe } from './Pipes/date-filter.pipe';
     AddShowingFormComponent,
     ReservationFormComponent,
     RoomComponent,
-    DateFilterPipe
+    DateFilterPipe,
+    RoomsPageComponent
   ],
   entryComponents: [
     AddMovieFormComponent,
