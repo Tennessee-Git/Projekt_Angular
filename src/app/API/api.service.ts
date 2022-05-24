@@ -47,6 +47,11 @@ export class APIService {
     .pipe(catchError(this.handleError));
   }
 
+  getReservations(): Observable<Reservation[]> {
+    return this.http.get<Reservation[]>(this.URL + '/rezerwacje')
+    .pipe(catchError(this.handleError));
+  }
+
   //POST -------------------------------------------
   addMovie(newMovie: object): Observable<Movie> {
     return this.http.post<Movie>(this.URL + '/filmy', newMovie)

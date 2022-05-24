@@ -33,6 +33,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { NgxMatDatetimePickerModule, NgxMatTimepickerModule, NgxNativeDateModule } from '@angular-material-components/datetime-picker';
 import { DateFilterPipe } from './Pipes/date-filter.pipe';
 import { RoomsPageComponent } from './pages/rooms-page/rooms-page.component';
+import { NgChartsModule } from 'ng2-charts';
+import { PopularityChartComponent } from './components/chart/popularity-chart/popularity-chart.component';
 
 
 @NgModule({
@@ -54,7 +56,8 @@ import { RoomsPageComponent } from './pages/rooms-page/rooms-page.component';
     ReservationFormComponent,
     RoomComponent,
     DateFilterPipe,
-    RoomsPageComponent
+    RoomsPageComponent,
+    PopularityChartComponent
   ],
   entryComponents: [
     AddMovieFormComponent,
@@ -74,7 +77,8 @@ import { RoomsPageComponent } from './pages/rooms-page/rooms-page.component';
     NgxMatDatetimePickerModule,
     NgxMatTimepickerModule,
     NgxNativeDateModule,
-    MatInputModule
+    MatInputModule,
+    NgChartsModule
   ],
   providers: [
     APIService,

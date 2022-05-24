@@ -90,15 +90,6 @@
       "id": 4
     },
     {
-      "title": "asdas",
-      "imageURL": "https://cdn.pastemagazine.com/www/system/images/photo_albums/best-movie-posters-2016/large/moonlight-ver2-xlg.jpg?1384968217",
-      "length": 121,
-      "label": "asdas",
-      "value": 6,
-      "popularity": 0,
-      "id": 6
-    },
-    {
       "title": "asdasd",
       "imageURL": "https://i5.walmartimages.com/asr/149d1fd0-2254-421f-89d8-fe8d0f879b2d.45ce4ae056c8c0b3b1fce677f437a252.jpeg",
       "length": 6969,
@@ -118,81 +109,6 @@
     }
   ],
   "seanse": [
-    {
-      "date": "15-01-2022 17:28",
-      "movieId": 1,
-      "roomId": 1,
-      "movieTitle": "Test1",
-      "id": 2,
-      "availableSeats": 88,
-      "seatsTaken": [
-        "A-2",
-        "A-3"
-      ]
-    },
-    {
-      "date": "28-11-2021 14:00",
-      "movieTitle": "Test1",
-      "movieId": 1,
-      "roomId": 2,
-      "id": 8,
-      "availableSeats": 100,
-      "seatsTaken": []
-    },
-    {
-      "date": "28-11-2021 14:17",
-      "movieTitle": "Test1",
-      "movieId": 1,
-      "roomId": 2,
-      "id": 9,
-      "availableSeats": 100,
-      "seatsTaken": []
-    },
-    {
-      "date": "28-11-2021 14:17",
-      "movieId": 2,
-      "roomId": 2,
-      "movieTitle": "test2",
-      "availableSeats": 100,
-      "seatsTaken": [],
-      "id": 10
-    },
-    {
-      "date": "04-12-2021 17:00",
-      "movieId": 1,
-      "roomId": 5,
-      "movieTitle": "Test1",
-      "availableSeats": 110,
-      "seatsTaken": [],
-      "id": 15
-    },
-    {
-      "date": "04-12-2021 17:00",
-      "movieId": 2,
-      "roomId": 2,
-      "movieTitle": "test2",
-      "availableSeats": 100,
-      "seatsTaken": [],
-      "id": 16
-    },
-    {
-      "date": "04-12-2021 16:30",
-      "movieId": 9,
-      "roomId": 3,
-      "movieTitle": "jjjj",
-      "availableSeats": 80,
-      "seatsTaken": [],
-      "id": 18
-    },
-    {
-      "date": "04-12-2021 17:00",
-      "movieId": 9,
-      "roomId": 3,
-      "movieTitle": "jjjj",
-      "availableSeats": 80,
-      "seatsTaken": [],
-      "id": 19
-    },
     {
       "date": "04-12-2021 17:00",
       "movieId": 7,
@@ -281,169 +197,27 @@
         "I-2"
       ],
       "id": 28
+    },
+    {
+      "date": "24-05-2022 11:52",
+      "movieId": 1,
+      "roomId": 1,
+      "movieTitle": "Test1",
+      "availableSeats": 90,
+      "seatsTaken": [],
+      "id": 29
+    },
+    {
+      "date": "23-05-2022 18:00",
+      "movieId": 1,
+      "roomId": 1,
+      "movieTitle": "Test1",
+      "availableSeats": 90,
+      "seatsTaken": [],
+      "id": 30
     }
   ],
   "rezerwacje": [
-    {
-      "name": "Paweł",
-      "lastName": "Awramiuk",
-      "email": "test@gmail.com",
-      "seansId": 8,
-      "seatCode": "I-10",
-      "id": 3
-    },
-    {
-      "name": "Paweł",
-      "lastName": "Awramiuk",
-      "email": "tesd@gmail.com",
-      "seansId": 8,
-      "seatCode": "E-2",
-      "id": 4
-    },
-    {
-      "name": "Paweł",
-      "lastName": "Awramiuk",
-      "email": "test@gmail.com",
-      "seansId": 8,
-      "seatCode": "D-6",
-      "id": 5
-    },
-    {
-      "name": "Paweł",
-      "lastName": "Awramiuk",
-      "email": "asdasd@gmail.com",
-      "seansId": 2,
-      "seatCode": "A-1",
-      "id": 6
-    },
-    {
-      "name": "Paweł",
-      "lastName": "Awramiuk",
-      "email": "ghhf@gmail.com",
-      "seansId": 2,
-      "seatCode": "J-1",
-      "id": 7
-    },
-    {
-      "name": "Paweł",
-      "lastName": "Awramiuk",
-      "email": "awramiukofficial@gmail.com",
-      "seansId": 7,
-      "seatCode": "A-1",
-      "id": 8
-    },
-    {
-      "name": "Paweł",
-      "lastName": "Awramiuk",
-      "email": "awramiukofficial@gmail.com",
-      "seansId": 7,
-      "seatCode": "A-1",
-      "id": 9
-    },
-    {
-      "name": "Paweł",
-      "lastName": "Awramiuk",
-      "email": "hghgh@gmail.com",
-      "seansId": 8,
-      "seatCode": "D-3",
-      "id": 10
-    },
-    {
-      "name": "Paweł",
-      "lastName": "Awramiuk",
-      "email": "awramiukofficial@gmail.com",
-      "seansId": 9,
-      "seatCode": "J-5",
-      "id": 11
-    },
-    {
-      "name": "Paweł",
-      "lastName": "Awramiuk",
-      "email": "awramiukofficial@gmail.com",
-      "seansId": 9,
-      "seatCode": "A-1",
-      "id": 12
-    },
-    {
-      "name": "Paweł",
-      "lastName": "Awramiuk",
-      "email": "awramiukofficial@gmail.com",
-      "seansId": 8,
-      "seatCode": "A-5",
-      "id": 13
-    },
-    {
-      "name": "Paweł",
-      "lastName": "Awramiuk",
-      "email": "awramiukofficial@gmail.com",
-      "seansId": 9,
-      "seatCode": "J-4",
-      "id": 14
-    },
-    {
-      "name": "Paweł",
-      "lastName": "Awramiuk",
-      "email": "awramiukofficial@gmail.com",
-      "seansId": 9,
-      "seatCode": "B-4",
-      "id": 15
-    },
-    {
-      "name": "Paweł",
-      "lastName": "Awramiuk",
-      "email": "awramiukofficial@gmail.com",
-      "seansId": 22,
-      "seatCode": "A-2",
-      "id": 16
-    },
-    {
-      "name": "Paweł",
-      "lastName": "Awramiuk",
-      "email": "awramiukofficial@gmail.com",
-      "seansId": 22,
-      "seatCode": "A-5",
-      "id": 17
-    },
-    {
-      "name": "Paweł",
-      "lastName": "Awramiuk",
-      "email": "awramiukofficial@gmail.com",
-      "seansId": 22,
-      "seatCode": "A-3",
-      "id": 18
-    },
-    {
-      "name": "Paweł",
-      "lastName": "Awramiuk",
-      "email": "awramiukofficial@gmail.com",
-      "seansId": 22,
-      "seatCode": "C-8",
-      "id": 19
-    },
-    {
-      "name": "Paweł",
-      "lastName": "Awramiuk",
-      "email": "awramiukofficial@gmail.com",
-      "seansId": 22,
-      "seatCode": "A-1",
-      "id": 20
-    },
-    {
-      "name": "Paweł",
-      "lastName": "Awramiuk",
-      "email": "awramiukofficial@gmail.com",
-      "seansId": 28,
-      "seatCode": "I-10",
-      "id": 21
-    },
-    {
-      "name": "Adam",
-      "lastName": "Kowalski",
-      "email": "a.kowalskie@wp.pl",
-      "seansId": 28,
-      "seatCode": "I-2",
-      "id": 22
-    },
     {
       "name": "Paweł",
       "lastName": "Awramiuk",

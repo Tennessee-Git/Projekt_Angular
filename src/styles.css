@@ -18,6 +18,12 @@ code {
   grid-gap: 10px;
 }
 
+@media (max-width: 600px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (min-width: 992px) {
   .movie-grid {
     grid-template-columns: repeat(5, 1fr);
@@ -34,6 +40,12 @@ code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+
+@media (min-width: 600) {
+  .card-container {
+    width: 500;
+  }
 }
 
 @media (min-width: 768px) {
