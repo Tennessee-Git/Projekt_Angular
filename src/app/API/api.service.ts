@@ -18,70 +18,70 @@ export class APIService {
 
   //GET -------------------------------------------
   getMovies(): Observable<Movie[]> {
-    return this.http.get<Movie[]>(this.URL+'/filmy')
+    return this.http.get<Movie[]>(this.URL+'/movies')
     .pipe(catchError(this.handleError));
   }
 
   getMovieById(id:number): Observable<Movie> {
-    return this.http.get<Movie>(this.URL + '/filmy/' + id)
+    return this.http.get<Movie>(this.URL + '/movies/' + id)
     .pipe(catchError(this.handleError));
   }
 
   getShowings(): Observable<Showing[]> {
-    return this.http.get<Showing[]>(this.URL + '/seanse')
+    return this.http.get<Showing[]>(this.URL + '/showings')
     .pipe(catchError(this.handleError));
   }
 
   getShowingById(id:number): Observable<Showing> {
-    return this.http.get<Showing>(this.URL + '/seanse/' + id)
+    return this.http.get<Showing>(this.URL + '/showings/' + id)
     .pipe(catchError(this.handleError));
   }
 
   getRooms(): Observable<Room[]> {
-    return this.http.get<Room[]>(this.URL + '/sale')
+    return this.http.get<Room[]>(this.URL + '/rooms')
     .pipe(catchError(this.handleError));
   }
 
   getRoomById(id: number): Observable<Room> {
-    return this.http.get<Room>(this.URL + '/sale/' + id)
+    return this.http.get<Room>(this.URL + '/rooms/' + id)
     .pipe(catchError(this.handleError));
   }
 
   getReservations(): Observable<Reservation[]> {
-    return this.http.get<Reservation[]>(this.URL + '/rezerwacje')
+    return this.http.get<Reservation[]>(this.URL + '/reservations')
     .pipe(catchError(this.handleError));
   }
 
   //POST -------------------------------------------
   addMovie(newMovie: object): Observable<Movie> {
-    return this.http.post<Movie>(this.URL + '/filmy', newMovie)
+    return this.http.post<Movie>(this.URL + '/movies', newMovie)
     .pipe(catchError(this.handleError));
   }
 
   addShowing(newShowing: object): Observable<Showing> {
-    return this.http.post<Showing>(this.URL + '/seanse', newShowing)
+    return this.http.post<Showing>(this.URL + '/showings', newShowing)
     .pipe(catchError(this.handleError));
   }
 
   addReservation(newReservation: object): Observable<Reservation> {
-    return this.http.post<Reservation>(this.URL + '/rezerwacje', newReservation)
+    return this.http.post<Reservation>(this.URL + '/reservations', newReservation)
     .pipe(catchError(this.handleError));
   }
 
   //DELETE -------------------------------------------
   deleteMovie(id:number): Observable<any>{
-    return this.http.delete(this.URL + '/filmy/' + id)
+    return this.http.delete(this.URL + '/movies/' + id)
     .pipe(catchError(this.handleError));
   }
 
   //PUT -------------------------------------------
   editMovie(movie2Edit: object, id: number): Observable<object> {
-    return this.http.put(this.URL + '/filmy/' + id, movie2Edit)
+    return this.http.put(this.URL + '/movies/' + id, movie2Edit)
       .pipe(catchError(this.handleError));
   }
 
   editShowing(showing2Edit: object, id: number): Observable<object> {
-    return this.http.put(this.URL + '/seanse/' + id, showing2Edit)
+    return this.http.put(this.URL + '/showings/' + id, showing2Edit)
       .pipe(catchError(this.handleError));
     }
 

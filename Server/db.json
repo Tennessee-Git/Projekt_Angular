@@ -1,5 +1,5 @@
 {
-  "sale": [
+  "rooms": [
     {
       "id": 1,
       "label": "Sala 1",
@@ -61,7 +61,7 @@
       "capacity": 90
     }
   ],
-  "filmy": [
+  "movies": [
     {
       "title": "Test1",
       "imageURL": "https://cdn11.bigcommerce.com/s-ydriczk/images/stencil/1280x1280/products/89058/93685/Joker-2019-Final-Style-steps-Poster-buy-original-movie-posters-at-starstills__62518.1572351179.jpg?c=2",
@@ -99,7 +99,7 @@
       "id": 8
     }
   ],
-  "seanse": [
+  "showings": [
     {
       "date": "15-01-2022 17:28",
       "movieId": 1,
@@ -160,56 +160,6 @@
       "id": 16
     },
     {
-      "date": "04-12-2021 16:30",
-      "movieId": 9,
-      "roomId": 3,
-      "movieTitle": "jjjj",
-      "availableSeats": 80,
-      "seatsTaken": [],
-      "id": 18
-    },
-    {
-      "date": "04-12-2021 17:00",
-      "movieId": 9,
-      "roomId": 3,
-      "movieTitle": "jjjj",
-      "availableSeats": 80,
-      "seatsTaken": [],
-      "id": 19
-    },
-    {
-      "date": "04-12-2021 17:00",
-      "movieId": 7,
-      "roomId": 5,
-      "movieTitle": "qweert",
-      "availableSeats": 110,
-      "seatsTaken": [],
-      "id": 20
-    },
-    {
-      "date": "04-12-2021 17:30",
-      "movieId": 7,
-      "roomId": 5,
-      "movieTitle": "qweert",
-      "availableSeats": 110,
-      "seatsTaken": [],
-      "id": 21
-    },
-    {
-      "date": "04-12-2021 18:30",
-      "movieTitle": "teststst",
-      "movieId": 5,
-      "roomId": 6,
-      "id": 22,
-      "availableSeats": 76,
-      "seatsTaken": [
-        "A-5",
-        "A-3",
-        "C-8",
-        "A-1"
-      ]
-    },
-    {
       "date": "05-12-2021 16:30",
       "movieId": 1,
       "roomId": 1,
@@ -265,18 +215,9 @@
         "I-2"
       ],
       "id": 28
-    },
-    {
-      "date": "11-05-2022 17:08",
-      "movieId": 6,
-      "roomId": 5,
-      "movieTitle": "asdas",
-      "availableSeats": 110,
-      "seatsTaken": [],
-      "id": 29
     }
   ],
-  "rezerwacje": [
+  "reservations": [
     {
       "name": "Paweł",
       "lastName": "Awramiuk",
