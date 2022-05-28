@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ChartData, ChartType } from 'chart.js';
 import * as moment from 'moment';
-import { Movie } from 'src/app/models/Movie';
+import { getShowingsFromLast7Days } from 'src/app/API/popularity';
 import { Showing } from 'src/app/models/Showing';
 
 @Component({
@@ -11,7 +11,6 @@ import { Showing } from 'src/app/models/Showing';
 })
 export class PopularityChartComponent implements OnInit {
   @Input() showings !: Showing[];
-  @Input() movies !: Movie[];
   showingsFromLast7Days !: Showing[];
   chartType: ChartType = 'bar'
   chartData!: ChartData<'bar'>;
@@ -24,9 +23,8 @@ export class PopularityChartComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.showingsFromLast7Days = this.getShowingsFromLast7Days();
+    this.showingsFromLast7Days = getShowingsFromLast7Days(this.showings);
     this.setChartData();
-    console.log(this.showings)
   }
 
   setChartData():void {
@@ -57,16 +55,5 @@ export class PopularityChartComponent implements OnInit {
         { data: Object.values(obj), label: 'Ilość sprzedanych biletów' }
       ]
     }
-  }
-
-  getShowingsFromLast7Days():Showing[] {
-    const now = new Date();
-    const before = moment(now).subtract(7, 'd').toDate();
-
-    const lastShowings:Showing[] = this.showings.filter( (showing) => {
-      return moment(showing.date,'DD-MM-YYYY HH:mm').isBetween(moment(before), moment(now))
-    });
-
-    return lastShowings;
   }
 }

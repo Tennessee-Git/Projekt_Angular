@@ -106,15 +106,6 @@
       "value": 9,
       "popularity": 0,
       "id": 9
-    },
-    {
-      "title": "film6",
-      "imageURL": "https://i.ebayimg.com/images/g/zK4AAOSw3b9cjJz0/s-l400.jpg",
-      "length": 123,
-      "label": "film6",
-      "value": 10,
-      "popularity": 0,
-      "id": 10
     }
   ],
   "showings": [
@@ -257,10 +248,11 @@
       "movieId": 2,
       "roomId": 1,
       "movieTitle": "test2",
-      "availableSeats": 88,
+      "availableSeats": 87,
       "seatsTaken": [
         "A-3",
-        "A-4"
+        "A-4",
+        "A-5"
       ],
       "id": 31
     },
@@ -332,18 +324,6 @@
       "id": 38
     },
     {
-      "date": "26-05-2022 15:03",
-      "movieId": 10,
-      "roomId": 4,
-      "movieTitle": "film6",
-      "availableSeats": 88,
-      "seatsTaken": [
-        "D-5",
-        "A-5"
-      ],
-      "id": 39
-    },
-    {
       "date": "25-05-2022 15:03",
       "movieId": 9,
       "roomId": 2,
@@ -353,17 +333,6 @@
         "A-4"
       ],
       "id": 40
-    },
-    {
-      "date": "26-05-2022 15:04",
-      "movieId": 10,
-      "roomId": 5,
-      "movieTitle": "film6",
-      "availableSeats": 109,
-      "seatsTaken": [
-        "A-4"
-      ],
-      "id": 41
     }
   ],
   "reservations": [
@@ -454,6 +423,14 @@
       "seansId": 31,
       "seatCode": "A-4",
       "id": 33
+    },
+    {
+      "name": "Paweł",
+      "lastName": "Awramiuk",
+      "email": "awramiukofficial@gmail.com",
+      "seansId": 31,
+      "seatCode": "A-5",
+      "id": 34
     }
   ]
 }

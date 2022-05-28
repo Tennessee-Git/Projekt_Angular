@@ -28,6 +28,7 @@ import { RoomComponent } from './components/room/room.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule} from '@angular/material/select';
+import { MatTableModule } from '@angular/material/table'
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { NgxMatDatetimePickerModule, NgxMatTimepickerModule, NgxNativeDateModule } from '@angular-material-components/datetime-picker';
@@ -88,7 +89,8 @@ import { EditRoomFormComponent } from './components/forms/edit-room-form/edit-ro
     NgxMatTimepickerModule,
     NgxNativeDateModule,
     MatInputModule,
-    NgChartsModule
+    NgChartsModule,
+    MatTableModule
   ],
   providers: [
     APIService,

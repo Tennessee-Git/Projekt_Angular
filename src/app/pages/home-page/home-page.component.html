@@ -5,12 +5,17 @@
 <div class="card-container">
   <div class="movie-grid">
     <div *ngFor="let showing of showings | dateFilter">
-      <showing-details [id]="showing.id" [date]="showing.date" [roomId]="showing.roomId" [movieTitle]="showing.movieTitle" [availableSeats]="showing.availableSeats">
+      <showing-details
+        [id]="showing.id"
+        [date]="showing.date"
+        [roomId]="showing.roomId"
+        [movieTitle]="showing.movieTitle"
+        [availableSeats]="showing.availableSeats">
       </showing-details>
     </div>
   </div>
-  <div>
-      <popularity-chart [showings]="showings" [movies]="movies"></popularity-chart>
-      <popularity-table [showings]="showings" [movies]="movies"></popularity-table>
+  <div class="popularity">
+      <popularity-chart [showings]="showings"></popularity-chart>
+      <popularity-table [showings]="showings"></popularity-table>
     </div>
 </div>
