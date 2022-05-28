@@ -15,43 +15,41 @@ export class PopularityChartComponent implements OnInit {
   showingsFromLast7Days !: Showing[];
   chartType: ChartType = 'bar'
   chartData!: ChartData<'bar'>;
+  chartOptions = {
+    scaleShowVerticalLines: false,
+    responsive: true
+  };
   labels!:string[];
 
   constructor() { }
 
   ngOnInit(): void {
     this.showingsFromLast7Days = this.getShowingsFromLast7Days();
-    this.getChartData();
+    this.setChartData();
+    console.log(this.showings)
   }
 
-  public chartOptions = {
-    scaleShowVerticalLines: false,
-    responsive: true
-  };
-
-  getChartData():void {
-    const chartData = new Map<number, number>();
+  setChartData():void {
+    const chartData = new Map<string, number>();
 
     this.showingsFromLast7Days.forEach( (showing) => {
-      if(chartData.has(showing.movieId)) {
-        let temp = (chartData.get(showing.movieId)) as number + 1;
+      if(chartData.has(showing.movieTitle)) {
+        let temp = (chartData.get(showing.movieTitle)) as number + showing.seatsTaken.length;
         chartData.set(
-          showing.movieId,
+          showing.movieTitle,
           temp
         )
       }
       else {
         chartData.set(
-          showing.movieId,
-          1
+          showing.movieTitle,
+          showing.seatsTaken.length
         )
       }
     });
 
     let temp = new Map([...chartData.entries()].sort((a, b) => b[1] - a[1]));
     let obj = Object.fromEntries(Array.from(temp.entries()).slice(0,5));
-
-
 
     this.chartData = {
       labels: Object.keys(obj),

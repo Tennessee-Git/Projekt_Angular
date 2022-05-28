@@ -97,6 +97,24 @@
       "value": 8,
       "popularity": 0,
       "id": 8
+    },
+    {
+      "title": "film5",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Test-Logo.svg/783px-Test-Logo.svg.png",
+      "length": 123,
+      "label": "film5",
+      "value": 9,
+      "popularity": 0,
+      "id": 9
+    },
+    {
+      "title": "film6",
+      "imageURL": "https://i.ebayimg.com/images/g/zK4AAOSw3b9cjJz0/s-l400.jpg",
+      "length": 123,
+      "label": "film6",
+      "value": 10,
+      "popularity": 0,
+      "id": 10
     }
   ],
   "showings": [
@@ -239,8 +257,11 @@
       "movieId": 2,
       "roomId": 1,
       "movieTitle": "test2",
-      "availableSeats": 90,
-      "seatsTaken": [],
+      "availableSeats": 88,
+      "seatsTaken": [
+        "A-3",
+        "A-4"
+      ],
       "id": 31
     },
     {
@@ -284,9 +305,65 @@
       "movieId": 4,
       "roomId": 5,
       "movieTitle": "test3",
-      "availableSeats": 110,
-      "seatsTaken": [],
+      "availableSeats": 109,
+      "seatsTaken": [
+        "A-3"
+      ],
       "id": 36
+    },
+    {
+      "date": "27-05-2022 15:02",
+      "movieId": 8,
+      "roomId": 4,
+      "movieTitle": "asdasd",
+      "availableSeats": 89,
+      "seatsTaken": [
+        "A-3"
+      ],
+      "id": 37
+    },
+    {
+      "date": "25-05-2022 15:02",
+      "movieId": 9,
+      "roomId": 3,
+      "movieTitle": "film5",
+      "availableSeats": 80,
+      "seatsTaken": [],
+      "id": 38
+    },
+    {
+      "date": "26-05-2022 15:03",
+      "movieId": 10,
+      "roomId": 4,
+      "movieTitle": "film6",
+      "availableSeats": 88,
+      "seatsTaken": [
+        "D-5",
+        "A-5"
+      ],
+      "id": 39
+    },
+    {
+      "date": "25-05-2022 15:03",
+      "movieId": 9,
+      "roomId": 2,
+      "movieTitle": "film5",
+      "availableSeats": 99,
+      "seatsTaken": [
+        "A-4"
+      ],
+      "id": 40
+    },
+    {
+      "date": "26-05-2022 15:04",
+      "movieId": 10,
+      "roomId": 5,
+      "movieTitle": "film6",
+      "availableSeats": 109,
+      "seatsTaken": [
+        "A-4"
+      ],
+      "id": 41
     }
   ],
   "reservations": [
@@ -313,6 +390,70 @@
       "seansId": 8,
       "seatCode": "A-4",
       "id": 25
+    },
+    {
+      "name": "Paweł",
+      "lastName": "Awramiuk",
+      "email": "awramiukofficial@gmail.com",
+      "seansId": 40,
+      "seatCode": "A-4",
+      "id": 26
+    },
+    {
+      "name": "Paweł",
+      "lastName": "Awramiuk",
+      "email": "awramiukofficial@gmail.com",
+      "seansId": 39,
+      "seatCode": "D-5",
+      "id": 27
+    },
+    {
+      "name": "Paweł",
+      "lastName": "Awramiuk",
+      "email": "awramiukofficial@gmail.com",
+      "seansId": 41,
+      "seatCode": "A-4",
+      "id": 28
+    },
+    {
+      "name": "Paweł",
+      "lastName": "Awramiuk",
+      "email": "awramiukofficial@gmail.com",
+      "seansId": 39,
+      "seatCode": "A-5",
+      "id": 29
+    },
+    {
+      "name": "Paweł",
+      "lastName": "Awramiuk",
+      "email": "awramiukofficial@gmail.com",
+      "seansId": 37,
+      "seatCode": "A-3",
+      "id": 30
+    },
+    {
+      "name": "Paweł",
+      "lastName": "Awramiuk",
+      "email": "awramiukofficial@gmail.com",
+      "seansId": 36,
+      "seatCode": "A-3",
+      "id": 31
+    },
+    {
+      "name": "Paweł",
+      "lastName": "Awramiuk",
+      "email": "awramiukofficial@gmail.com",
+      "seansId": 31,
+      "seatCode": "A-3",
+      "id": 32
+    },
+    {
+      "name": "Paweł",
+      "lastName": "Awramiuk",
+      "email": "awramiukofficial@gmail.com",
+      "seansId": 31,
+      "seatCode": "A-4",
+      "id": 33
     }
   ]
 }

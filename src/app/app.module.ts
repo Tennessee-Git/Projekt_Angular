@@ -35,6 +35,7 @@ import { DateFilterPipe } from './Pipes/date-filter.pipe';
 import { RoomsPageComponent } from './pages/rooms-page/rooms-page.component';
 import { NgChartsModule } from 'ng2-charts';
 import { PopularityChartComponent } from './components/chart/popularity-chart/popularity-chart.component';
+import { PopularityTableComponent } from './components/table/popularity-table/popularity-table.component';
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import { PopularityChartComponent } from './components/chart/popularity-chart/po
     RoomComponent,
     DateFilterPipe,
     RoomsPageComponent,
-    PopularityChartComponent
+    PopularityChartComponent,
+    PopularityTableComponent
   ],
   entryComponents: [
     AddMovieFormComponent,
