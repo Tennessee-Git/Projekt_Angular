@@ -12,20 +12,20 @@ code {
     monospace;
 }
 
-.movie-grid {
+.custom-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
 }
 
 @media (max-width: 600px) {
-  .movie-grid {
+  .custom-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 992px) {
-  .movie-grid {
+  .custom-grid {
     grid-template-columns: repeat(5, 1fr);
   }
 }
@@ -95,7 +95,7 @@ code {
   border-color: transparent;
   transition: all 0.4s ease;
   font-size: 1.25rem;
-  padding: 5px;
+  padding: 2px;
   margin: 0;
 }
 

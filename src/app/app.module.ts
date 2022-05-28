@@ -36,6 +36,10 @@ import { RoomsPageComponent } from './pages/rooms-page/rooms-page.component';
 import { NgChartsModule } from 'ng2-charts';
 import { PopularityChartComponent } from './components/chart/popularity-chart/popularity-chart.component';
 import { PopularityTableComponent } from './components/table/popularity-table/popularity-table.component';
+import { RoomListComponent } from './components/room components/room-list/room-list.component';
+import { RoomDetailsComponent } from './components/room components/room-details/room-details.component';
+import { AddRoomFormComponent } from './components/forms/add-room-form/add-room-form.component';
+import { EditRoomFormComponent } from './components/forms/edit-room-form/edit-room-form.component';
 
 
 @NgModule({
@@ -59,7 +63,11 @@ import { PopularityTableComponent } from './components/table/popularity-table/po
     DateFilterPipe,
     RoomsPageComponent,
     PopularityChartComponent,
-    PopularityTableComponent
+    PopularityTableComponent,
+    RoomListComponent,
+    RoomDetailsComponent,
+    AddRoomFormComponent,
+    EditRoomFormComponent
   ],
   entryComponents: [
     AddMovieFormComponent,

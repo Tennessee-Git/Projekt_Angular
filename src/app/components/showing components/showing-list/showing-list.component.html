@@ -1,7 +1,12 @@
 <div class="card-container">
-  <div class="movie-grid">
+  <div class="custom-grid">
     <div *ngFor="let showing of showings">
-      <showing-details [id]="showing.id" [date]="showing.date" [roomId]="showing.roomId" [movieTitle]="showing.movieTitle" [availableSeats]="showing.availableSeats">
+      <showing-details
+      [id]="showing.id"
+      [date]="showing.date"
+      [roomId]="showing.roomId"
+      [movieTitle]="showing.movieTitle"
+      [availableSeats]="showing.availableSeats">
       </showing-details>
     </div>
   </div>

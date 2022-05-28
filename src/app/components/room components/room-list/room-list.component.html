@@ -1,0 +1,12 @@
+<div class="card-container">
+  <div class="custom-grid">
+    <div *ngFor="let room of rooms">
+      <room-details
+      [id]="room.id"
+      [label]="room.label"
+      [value]="room.value"
+      [capacity]="room.capacity"
+      [deleteFunction]="delete"></room-details>
+    </div>
+  </div>
+</div>

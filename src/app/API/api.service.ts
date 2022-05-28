@@ -63,6 +63,11 @@ export class APIService {
     .pipe(catchError(this.handleError));
   }
 
+  addRoom(newRoom: object): Observable<Room> {
+    return this.http.post<Room>(this.URL + '/rooms', newRoom)
+    .pipe(catchError(this.handleError));
+  }
+
   addReservation(newReservation: object): Observable<Reservation> {
     return this.http.post<Reservation>(this.URL + '/reservations', newReservation)
     .pipe(catchError(this.handleError));
@@ -74,6 +79,11 @@ export class APIService {
     .pipe(catchError(this.handleError));
   }
 
+  deleteRoom(id:number): Observable<any>{
+    return this.http.delete(this.URL + '/rooms/' + id)
+    .pipe(catchError(this.handleError));
+  }
+
   //PUT -------------------------------------------
   editMovie(movie2Edit: object, id: number): Observable<object> {
     return this.http.put(this.URL + '/movies/' + id, movie2Edit)
@@ -82,6 +92,11 @@ export class APIService {
 
   editShowing(showing2Edit: object, id: number): Observable<object> {
     return this.http.put(this.URL + '/showings/' + id, showing2Edit)
+      .pipe(catchError(this.handleError));
+    }
+
+  editRoom(room2Edit: object, id: number): Observable<object> {
+    return this.http.put(this.URL + '/rooms/' + id, room2Edit)
       .pipe(catchError(this.handleError));
     }
 

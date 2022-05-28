@@ -1,0 +1,18 @@
+<div class="room-card">
+  <div class="room-details">
+    <div class="room-label">{{label | uppercase}}</div>
+    <div class="room-capacity">Pojemność: {{capacity}} osób</div>
+  </div>
+  <div class="overlay">
+    <div class="inner-card-controls">
+      <button class="ctrl-btn">
+        <a href="/EdytujSale/{{id}}" class="ctrl-btn">
+        <i class="far fa-edit"></i>
+      </a>
+      </button>
+      <button class="ctrl-btn" (click)="delete()">
+        <i class="far fa-trash-alt"></i>
+      </button>
+    </div>
+  </div>
+</div>
