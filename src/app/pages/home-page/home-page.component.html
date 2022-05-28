@@ -8,8 +8,9 @@
       <showing-details [id]="showing.id" [date]="showing.date" [roomId]="showing.roomId" [movieTitle]="showing.movieTitle" [availableSeats]="showing.availableSeats">
       </showing-details>
     </div>
-    <div>
-        <popularity-chart [showings]="showings" [movies]="movies"></popularity-chart>
-    </div>
   </div>
+  <div>
+      <popularity-chart [showings]="showings" [movies]="movies"></popularity-chart>
+      <h2>Tabela popularności filmów:</h2>
+    </div>
 </div>

@@ -215,6 +215,78 @@
         "I-2"
       ],
       "id": 28
+    },
+    {
+      "date": "27-05-2022 10:58",
+      "movieId": 2,
+      "roomId": 2,
+      "movieTitle": "test2",
+      "availableSeats": 100,
+      "seatsTaken": [],
+      "id": 29
+    },
+    {
+      "date": "26-05-2022 10:58",
+      "movieId": 1,
+      "roomId": 3,
+      "movieTitle": "Test1",
+      "availableSeats": 80,
+      "seatsTaken": [],
+      "id": 30
+    },
+    {
+      "date": "25-05-2022 10:59",
+      "movieId": 2,
+      "roomId": 1,
+      "movieTitle": "test2",
+      "availableSeats": 90,
+      "seatsTaken": [],
+      "id": 31
+    },
+    {
+      "date": "27-05-2022 11:13",
+      "movieId": 4,
+      "roomId": 3,
+      "movieTitle": "test3",
+      "availableSeats": 80,
+      "seatsTaken": [],
+      "id": 32
+    },
+    {
+      "date": "25-05-2022 11:13",
+      "movieId": 4,
+      "roomId": 3,
+      "movieTitle": "test3",
+      "availableSeats": 80,
+      "seatsTaken": [],
+      "id": 33
+    },
+    {
+      "date": "23-05-2022 11:14",
+      "movieId": 4,
+      "roomId": 10,
+      "movieTitle": "test3",
+      "availableSeats": 90,
+      "seatsTaken": [],
+      "id": 34
+    },
+    {
+      "date": "25-05-2022 12:48",
+      "movieId": 8,
+      "roomId": 9,
+      "movieTitle": "asdasd",
+      "availableSeats": 90,
+      "seatsTaken": [],
+      "id": 35
+    },
+    {
+      "date": "29-05-2022 13:17",
+      "movieId": 4,
+      "roomId": 5,
+      "movieTitle": "test3",
+      "availableSeats": 110,
+      "seatsTaken": [],
+      "id": 36
     }
   ],
   "reservations": [

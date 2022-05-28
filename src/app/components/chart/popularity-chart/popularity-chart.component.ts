@@ -13,38 +13,52 @@ export class PopularityChartComponent implements OnInit {
   @Input() showings !: Showing[];
   @Input() movies !: Movie[];
   showingsFromLast7Days !: Showing[];
+  chartType: ChartType = 'bar'
+  chartData!: ChartData<'bar'>;
+  labels!:string[];
+
   constructor() { }
+
+  ngOnInit(): void {
+    this.showingsFromLast7Days = this.getShowingsFromLast7Days();
+    this.getChartData();
+  }
 
   public chartOptions = {
     scaleShowVerticalLines: false,
     responsive: true
   };
 
-  public barChartType: ChartType = 'bar';
+  getChartData():void {
+    const chartData = new Map<number, number>();
 
-  public barChartData: ChartData<'bar'> = {
-    labels: [ '2006', '2007', '2008', '2009', '2010', '2011', '2012' ],
-    datasets: [
-      { data: [ 65, 59, 80, 81, 56, 55, 40 ], label: 'Ilość sprzedanych biletów' }
-    ]
-  };
+    this.showingsFromLast7Days.forEach( (showing) => {
+      if(chartData.has(showing.movieId)) {
+        let temp = (chartData.get(showing.movieId)) as number + 1;
+        chartData.set(
+          showing.movieId,
+          temp
+        )
+      }
+      else {
+        chartData.set(
+          showing.movieId,
+          1
+        )
+      }
+    });
 
-  ngOnInit(): void {
-    this.showingsFromLast7Days = this.getShowingsFromLast7Days();
-  }
-
-  getChartData():any[] {
-    const chartData: any[] = [];
+    let temp = new Map([...chartData.entries()].sort((a, b) => b[1] - a[1]));
+    let obj = Object.fromEntries(Array.from(temp.entries()).slice(0,5));
 
 
-    return chartData;
 
-  }
-
-  getChartLabels() {
-    const chartLabels:any[] = [];
-
-    return chartLabels;
+    this.chartData = {
+      labels: Object.keys(obj),
+      datasets: [
+        { data: Object.values(obj), label: 'Ilość sprzedanych biletów' }
+      ]
+    }
   }
 
   getShowingsFromLast7Days():Showing[] {
