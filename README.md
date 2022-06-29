@@ -11,7 +11,7 @@ Aplikacja do zarządzania seansami w kinie
 - wyświetlanie tabeli/wykresu popularności filmów na podstawie liczby sprzedanych biletów
 
 ### `NIEZREALIZOWANE FUNKCJONALNOŚCI:`
-- wyświetlanie tabeli/wykresu popularności filmów na podstawie liczby sprzedanych biletów
+- dodawanie/usuwanie/edycja sal filmowych
 
 # ProjektAngular
 
