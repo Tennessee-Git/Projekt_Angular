@@ -24,6 +24,8 @@
 }
 
 .inner-card-controls{
+  position: absolute;
+  left: 2%;
   opacity: 0;
   text-decoration: none;
   color: white;

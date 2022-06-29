@@ -59,6 +59,12 @@
       "label": "Sala 10",
       "value": 10,
       "capacity": 90
+    },
+    {
+      "capacity": 123,
+      "value": 11,
+      "label": "Sala 11",
+      "id": 11
     }
   ],
   "movies": [
@@ -106,95 +112,18 @@
       "value": 9,
       "popularity": 0,
       "id": 9
+    },
+    {
+      "title": "TESTOWY2",
+      "imageURL": "https://przedszkole.doruchow.pl/wp-content/uploads/2017/08/test.png",
+      "length": 123,
+      "label": "TESTOWY2",
+      "value": 11,
+      "popularity": 0,
+      "id": 11
     }
   ],
   "showings": [
-    {
-      "date": "15-01-2022 17:28",
-      "movieId": 1,
-      "roomId": 1,
-      "movieTitle": "Test1",
-      "id": 2,
-      "availableSeats": 88,
-      "seatsTaken": [
-        "A-2",
-        "A-3"
-      ]
-    },
-    {
-      "date": "28-11-2021 14:00",
-      "movieTitle": "Test1",
-      "movieId": 1,
-      "roomId": 2,
-      "id": 8,
-      "availableSeats": 99,
-      "seatsTaken": [
-        "A-4"
-      ]
-    },
-    {
-      "date": "28-11-2021 14:17",
-      "movieTitle": "Test1",
-      "movieId": 1,
-      "roomId": 2,
-      "id": 9,
-      "availableSeats": 100,
-      "seatsTaken": []
-    },
-    {
-      "date": "28-11-2021 14:17",
-      "movieId": 2,
-      "roomId": 2,
-      "movieTitle": "test2",
-      "availableSeats": 100,
-      "seatsTaken": [],
-      "id": 10
-    },
-    {
-      "date": "04-12-2021 17:00",
-      "movieId": 1,
-      "roomId": 5,
-      "movieTitle": "Test1",
-      "availableSeats": 110,
-      "seatsTaken": [],
-      "id": 15
-    },
-    {
-      "date": "04-12-2021 17:00",
-      "movieId": 2,
-      "roomId": 2,
-      "movieTitle": "test2",
-      "availableSeats": 100,
-      "seatsTaken": [],
-      "id": 16
-    },
-    {
-      "date": "05-12-2021 16:30",
-      "movieId": 1,
-      "roomId": 1,
-      "movieTitle": "Test1",
-      "availableSeats": 90,
-      "seatsTaken": [],
-      "id": 23
-    },
-    {
-      "date": "05-12-2021 17:00",
-      "movieId": 2,
-      "roomId": 1,
-      "movieTitle": "test2",
-      "availableSeats": 90,
-      "seatsTaken": [],
-      "id": 24
-    },
-    {
-      "date": "05-12-2021 17:00",
-      "movieId": 2,
-      "roomId": 7,
-      "movieTitle": "test2",
-      "availableSeats": 90,
-      "seatsTaken": [],
-      "id": 25
-    },
     {
       "date": "22-01-2022 17:22",
       "movieId": 2,
@@ -322,17 +251,6 @@
       "availableSeats": 80,
       "seatsTaken": [],
       "id": 38
-    },
-    {
-      "date": "25-05-2022 15:03",
-      "movieId": 9,
-      "roomId": 2,
-      "movieTitle": "film5",
-      "availableSeats": 99,
-      "seatsTaken": [
-        "A-4"
-      ],
-      "id": 40
     }
   ],
   "reservations": [
@@ -431,6 +349,46 @@
       "seansId": 31,
       "seatCode": "A-5",
       "id": 34
+    },
+    {
+      "name": "Paweł",
+      "lastName": "Awramiuk",
+      "email": "awramiukofficial@gmail.com",
+      "seansId": 43,
+      "seatCode": "A-3",
+      "id": 35
+    },
+    {
+      "name": "Paweł",
+      "lastName": "Awramiuk",
+      "email": "awramiukofficial@gmail.com",
+      "seansId": 44,
+      "seatCode": "A-4",
+      "id": 36
+    },
+    {
+      "name": "Paweł",
+      "lastName": "Awramiuk",
+      "email": "awramiukofficial@gmail.com",
+      "seansId": 44,
+      "seatCode": "A-5",
+      "id": 37
+    },
+    {
+      "name": "Paweł",
+      "lastName": "Awramiuk",
+      "email": "awramiukofficial@gmail.com",
+      "seansId": 44,
+      "seatCode": "A-6",
+      "id": 38
+    },
+    {
+      "name": "Paweł",
+      "lastName": "Awramiuk",
+      "email": "awramiukofficial@gmail.com",
+      "seansId": 40,
+      "seatCode": "A-3",
+      "id": 39
     }
   ]
 }

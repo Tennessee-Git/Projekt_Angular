@@ -99,6 +99,11 @@ code {
   margin: 0;
 }
 
+.ctrl-btn .small {
+  font-size: 1.1rem;
+  padding: 5px;
+}
+
 .ctrl-btn:hover {
   color: rgb(255, 58, 58);
   text-shadow:rgb(255, 255, 255) 1px 1px 5px;

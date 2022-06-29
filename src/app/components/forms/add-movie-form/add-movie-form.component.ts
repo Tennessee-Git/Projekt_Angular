@@ -22,7 +22,7 @@ export class AddMovieFormComponent implements OnInit, OnDestroy {
     });
   }
 
-  handleSubmit(formValues: Movie){
+  handleSubmit(formValues: Movie) {
     let newMovie = {
       title: formValues.title,
       imageURL: formValues.imageURL,

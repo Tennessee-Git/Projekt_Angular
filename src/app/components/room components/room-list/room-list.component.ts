@@ -17,7 +17,7 @@ export class RoomListComponent implements OnInit {
   ngOnInit(): void {
     this.getRooms();
     this.subscription = this.com.message$.subscribe((message) =>{
-      if(message == "relaodRoom")
+      if(message == "reloadRoom")
         this.getRooms();
     })
   }

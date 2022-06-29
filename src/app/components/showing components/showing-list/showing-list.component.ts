@@ -31,4 +31,9 @@ export class ShowingListComponent implements OnInit, OnDestroy {
       this.showings = data;
       console.log(data);});
   }
+
+  delete = (id: number) : void => {
+    console.log(`Delete ${id} from showing list`);
+    this.api.deleteShowing(id).subscribe((response) => { this.getShowings() });
+  }
 }

@@ -1,1 +1,17 @@
-<p>add-room-form works!</p>
+<div class="form-wrapper">
+<h2>Podaj pojemność nowej sali</h2>
+<br/>
+
+<form #addF="ngForm" (ngSubmit)="handleSubmit(addF.value)">
+  <div class="form-inputs">
+    <label>Pojemność:</label>
+    <input type="number" name="capacity" placeholder="Podaj pojemność sali" min="30" max="150" ngModel #capacity="ngModel" required />
+    <div *ngIf="capacity.invalid && capacity.touched" class="error-msg">
+      <div *ngIf="capacity.errors?.['min']">Sala musi mieć minimum 30 miejsc!</div>
+      <div *ngIf="capacity.errors?.['max']">Sala może mieć maksimum 150 miejsc!</div>
+      <div *ngIf="capacity.errors?.['required']"> Pojemność jest wymagana!</div>
+    </div>
+  </div>
+</form>
+<button [disabled]="!addF.valid" class="AddBtn" (click)="handleSubmit(addF.value)">Dodaj</button>
+</div>

@@ -11,9 +11,14 @@ export class ShowingDetailsComponent implements OnInit {
   @Input() movieTitle !: string;
   @Input() roomId !: number;
   @Input() availableSeats !: number;
+  @Input()deleteFunction!: (id: number) => void;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  delete():void{
+    this.deleteFunction(this.id);
   }
 }

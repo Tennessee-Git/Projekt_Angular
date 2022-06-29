@@ -52,7 +52,7 @@ export class PopularityChartComponent implements OnInit {
     this.chartData = {
       labels: Object.keys(obj),
       datasets: [
-        { data: Object.values(obj), label: 'Ilość sprzedanych biletów' }
+        { data: Object.values(obj), label: 'Ilość sprzedanych biletów z ostatnich 7 dni' }
       ]
     }
   }

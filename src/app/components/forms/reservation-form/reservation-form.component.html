@@ -36,7 +36,7 @@
     </div>
 
   </form>
-  <room *ngIf="capacity" [capacity]="capacity" [seatsTaken]="seatsTaken" [setSelectedSeat]="setSelectedSeat"></room>
+  <room-seats *ngIf="capacity" [capacity]="capacity" [seatsTaken]="seatsTaken" [setSelectedSeat]="setSelectedSeat"></room-seats>
   <br/>
   <button [disabled]="!f.valid && selectedSeat==''" class="AddBtn" (click)="handleSubmit(f.value)">Rezerwuj</button>
 </div>

@@ -84,6 +84,11 @@ export class APIService {
     .pipe(catchError(this.handleError));
   }
 
+  deleteShowing(id:number): Observable<any> {
+    return this.http.delete(this.URL + '/showings/' + id)
+    .pipe(catchError(this.handleError));
+  }
+
   //PUT -------------------------------------------
   editMovie(movie2Edit: object, id: number): Observable<object> {
     return this.http.put(this.URL + '/movies/' + id, movie2Edit)

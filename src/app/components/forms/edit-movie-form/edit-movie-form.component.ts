@@ -26,7 +26,7 @@ export class EditMovieFormComponent implements OnInit {
       });
   }
 
-  handleSubmit(formValues: Movie){
+  handleSubmit(formValues: Movie) {
     console.log(formValues);
     this.movie.imageURL = formValues.imageURL;
     this.movie.title = formValues.title;

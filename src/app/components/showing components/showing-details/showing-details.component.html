@@ -12,8 +12,11 @@
           <i class="far fa-edit"></i>
         </a>
       </button>
-      <button class="ctrl-btn">
-        <a href="/Rezerwuj/{{id}}"  class="ctrl-btn">Rezerwuj <i class="fas fa-ticket-alt"></i></a>
+      <button class="ctrl-btn small">
+        <a href="/Rezerwuj/{{id}}"  class="ctrl-btn small">Rezerwuj <i class="fas fa-ticket-alt"></i></a>
+      </button>
+      <button class="ctrl-btn" (click)="delete()">
+        <i class="far fa-trash-alt"></i>
       </button>
     </div>
   </div>
