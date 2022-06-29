@@ -10,9 +10,6 @@ Aplikacja do zarządzania seansami w kinie
 - wyświetlanie aktualnie trwających seansów
 - wyświetlanie tabeli/wykresu popularności filmów na podstawie liczby sprzedanych biletów
 
-### `NIEZREALIZOWANE FUNKCJONALNOŚCI:`
-- dodawanie/usuwanie/edycja sal filmowych
-
 # ProjektAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
