@@ -20,7 +20,7 @@
 }
 
 .showing-card:hover .overlay {
-  border: 5px solid rgb(255, 58, 58);
+  border: 5px solid var(--overlay-color);
 }
 
 .inner-card-controls{
@@ -43,7 +43,7 @@
   display: block;
   text-align: center;
   justify-content: center;
-  background-color: rgb(229, 160, 160);
+  background-color: var(--background-color);
   width: 200px;
   height: 250px;
 }

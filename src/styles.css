@@ -1,5 +1,14 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
+:root {
+  --main-color: rgb(184, 60, 60);
+  --background-color: rgb(229, 160, 160);
+  --overlay-color: rgb(255, 58, 58);
+  --navbar-color1: rgb(184, 60, 60);
+  --navbar-color2: rgb(206, 27, 27);
+  --navbar-hover-color: rgb(255, 0, 0);
+}
+
 body {
   height: 100%;
 
