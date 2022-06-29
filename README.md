@@ -6,12 +6,10 @@ Aplikacja do zarządzania seansami w kinie
 ### `WYMAGANIA:`
 - dodawanie/usuwanie/edycja seansów
 - dodawanie/usuwanie/edycja filmów
+- dodawanie/usuwanie/edycja sal kinowych
 - rezerwacja biletów na seanse
 - wyświetlanie aktualnie trwających seansów
 - wyświetlanie tabeli/wykresu popularności filmów na podstawie liczby sprzedanych biletów
-
-### `NIEZREALIZOWANE FUNKCJONALNOŚCI:`
-- dodawanie/usuwanie/edycja sal filmowych
 
 # ProjektAngular
 
