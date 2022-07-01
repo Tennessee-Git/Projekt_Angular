@@ -11,30 +11,19 @@ Aplikacja do zarządzania seansami w kinie
 - wyświetlanie aktualnie trwających seansów
 - wyświetlanie tabeli/wykresu popularności filmów na podstawie liczby sprzedanych biletów
 
-# ProjektAngular
+### `Uruchamianie aplikacji:`
+Po pobraniu repozytorium i otwarciu w VS Code, otwieramy dodatkowy terminal.
+W jednym (nr 1) przechodzimy do folderu projekt_angular (cd projekt_angular), natomiast w drugim (nr 2) do projekt_react\Server(cd projekt_angular\Server).
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+W terminalu nr 1 wywołujemy najpierw polecenie:
+### `npm install` w celu utworzenia folderu node_modules potrzebnego do uruchomienia aplikacji.
 
-## Development server
+Najpierw w terminalu nr 2 (najpierw włączamy serwer JSON) wywołujemy polecenie:
+### `npm start`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Następnie w terminalu nr 1 wywołujemy polecenie (należy pamiętać o parametrze -o, ponieważ wtedy polecenie od razu otworzy projekt w przeglądarce):
+### `ng serve -o`
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Po włączeniu:
+- [http://localhost:4200](http://localhost:4200) <- aplikacja włączy się na tym porcie
+- [http://localhost:3006](http://localhost:3006) <- serwer włączy się na tym porcie
