@@ -11,13 +11,14 @@ Aplikacja do zarządzania seansami w kinie
 - wyświetlanie aktualnie trwających seansów
 - wyświetlanie tabeli/wykresu popularności filmów na podstawie liczby sprzedanych biletów
 
-### `Uruchamianie aplikacji:`
+# `Uruchamianie aplikacji:`
 Po pobraniu repozytorium i otwarciu w VS Code, otwieramy dodatkowy terminal.
 W jednym (nr 1) przechodzimy do folderu projekt_angular (cd projekt_angular), natomiast w drugim (nr 2) do projekt_react\Server(cd projekt_angular\Server).
 
 W terminalu nr 1 wywołujemy najpierw polecenie:
 ### `npm install` 
 w celu utworzenia folderu node_modules potrzebnego do uruchomienia aplikacji.
+
 
 Najpierw w terminalu nr 2 (najpierw włączamy serwer JSON) wywołujemy polecenie:
 ### `npm start`
