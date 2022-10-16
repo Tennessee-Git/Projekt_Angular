@@ -13,42 +13,37 @@ body {
   height: 100%;
 
   margin: 0;
-  font-family: 'Lucida Sans', sans-serif;
+  font-family: "Lucida Sans", sans-serif;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 .custom-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-}
-
-@media (max-width: 600px) {
-  .custom-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 992px) {
-  .custom-grid {
-    grid-template-columns: repeat(5, 1fr);
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .heading {
   margin-bottom: 30px;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .card-container {
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 600) {
@@ -69,20 +64,20 @@ code {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1250px) {
   .card-container {
-    width: 1170px;
+    width: 1200px;
   }
 }
 
 .AddBtn {
-  color:white;
+  color: white;
   background-color: rgb(185, 76, 76);
   text-align: center;
   font-size: 1rem;
   border-radius: 4px;
   height: 30px;
-  border:none;
+  border: none;
   cursor: pointer;
 }
 
@@ -91,16 +86,16 @@ code {
   transition: all 0.2s ease-out;
 }
 
-.error-msg{
-  color:red;
-  font-size:small;
+.error-msg {
+  color: red;
+  font-size: small;
 }
 
 .ctrl-btn {
   color: rgb(255, 255, 255);
   background-color: transparent;
   border-radius: 4px;
-  text-shadow:rgb(0, 0, 0) 1px 1px 5px;
+  text-shadow: rgb(0, 0, 0) 1px 1px 5px;
   border-color: transparent;
   transition: all 0.4s ease;
   font-size: 1.25rem;
@@ -115,7 +110,7 @@ code {
 
 .ctrl-btn:hover {
   color: rgb(255, 58, 58);
-  text-shadow:rgb(255, 255, 255) 1px 1px 5px;
+  text-shadow: rgb(255, 255, 255) 1px 1px 5px;
   cursor: pointer;
 }
 
