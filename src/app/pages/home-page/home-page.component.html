@@ -1,4 +1,5 @@
 <div class="heading">
+  <br />
   <h1>Najbliższe seanse:</h1>
 </div>
 <div class="card-container">
@@ -9,12 +10,14 @@
         [date]="showing.date"
         [roomId]="showing.roomId"
         [movieTitle]="showing.movieTitle"
-        [availableSeats]="showing.availableSeats">
+        [availableSeats]="showing.availableSeats"
+      >
       </showing-details>
     </div>
   </div>
-  <div class="popularity">
-      <popularity-chart [showings]="showings"></popularity-chart>
-      <popularity-table [showings]="showings"></popularity-table>
-    </div>
+</div>
+<br />
+<div class="popularity">
+  <popularity-chart [showings]="showings"></popularity-chart>
+  <popularity-table [showings]="showings"></popularity-table>
 </div>
