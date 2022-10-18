@@ -1,43 +1,85 @@
 <div class="form-wrapper">
   <div>
     <h4>Informacje o seansie:</h4>
-    <p>Film: {{movieTitle | uppercase}}</p>
-    <p>Sala: {{roomId}}</p>
-    <p>Data: {{date}}</p>
+    <p>Film: {{ movieTitle | uppercase }}</p>
+    <p>Sala: {{ roomId }}</p>
+    <p>Data: {{ date }}</p>
   </div>
-  <br/>
+  <br />
   <form #f="ngForm" (ngSubmit)="handleSubmit(f.value)">
-
-    <div class="form-inputs-small">
+    <div class="form-inputs">
       <label>Imię</label>
-      <input type="text" name="name" placeholder="Podaj imię" minlength="3" ngModel #name="ngModel" required/>
+      <input
+        type="text"
+        name="name"
+        placeholder="Podaj imię"
+        minlength="3"
+        ngModel
+        #name="ngModel"
+        required
+      />
       <div *ngIf="name.invalid && name.touched" class="error-msg">
-        <div *ngIf="name.errors?.['minlength']" >Imię musi mieć co najmniej 3 litery!</div>
-        <div *ngIf="name.errors?.['required']" >Imię jest wymagane!</div>
+        <div *ngIf="name.errors?.['minlength']">
+          Imię musi mieć co najmniej 3 litery!
+        </div>
+        <div *ngIf="name.errors?.['required']">Imię jest wymagane!</div>
       </div>
     </div>
 
-    <div class="form-inputs-small">
+    <div class="form-inputs">
       <label>Nazwisko</label>
-      <input type="text" name="lastName" placeholder="Podaj nazwisko" ngModel #lastName="ngModel" required minlength="5"/>
+      <input
+        type="text"
+        name="lastName"
+        placeholder="Podaj nazwisko"
+        ngModel
+        #lastName="ngModel"
+        required
+        minlength="5"
+      />
       <div *ngIf="lastName.invalid && lastName.touched">
-        <div *ngIf="lastName.errors?.['minlength']" class="error-msg">Nazwisko musi mieć co najmniej 5 liter!</div>
-        <div *ngIf="lastName.errors?.['required']" class="error-msg">Nazwisko jest wymagane!</div>
+        <div *ngIf="lastName.errors?.['minlength']" class="error-msg">
+          Nazwisko musi mieć co najmniej 5 liter!
+        </div>
+        <div *ngIf="lastName.errors?.['required']" class="error-msg">
+          Nazwisko jest wymagane!
+        </div>
       </div>
     </div>
 
-    <div class="form-inputs-small">
+    <div class="form-inputs">
       <label>E-mail</label>
-      <input type="email" name="email" placeholder="Podaj email" ngModel #email="ngModel" required [email]="true">
+      <input
+        type="email"
+        name="email"
+        placeholder="Podaj email"
+        ngModel
+        #email="ngModel"
+        required
+        [email]="true"
+      />
       <div *ngIf="email.invalid && email.touched">
-        <div *ngIf="email.errors?.['required']" class="error-msg">E-mail jest wymagany!</div>
-        <div *ngIf="email.errors?.['email']" class="error-msg">To nie jest właściwy e-mail!</div>
+        <div *ngIf="email.errors?.['required']" class="error-msg">
+          E-mail jest wymagany!
+        </div>
+        <div *ngIf="email.errors?.['email']" class="error-msg">
+          To nie jest właściwy e-mail!
+        </div>
       </div>
     </div>
-
   </form>
-  <room-seats *ngIf="capacity" [capacity]="capacity" [seatsTaken]="seatsTaken" [setSelectedSeat]="setSelectedSeat"></room-seats>
-  <br/>
-  <button [disabled]="!f.valid && selectedSeat==''" class="AddBtn" (click)="handleSubmit(f.value)">Rezerwuj</button>
+  <room-seats
+    *ngIf="capacity"
+    [capacity]="capacity"
+    [seatsTaken]="seatsTaken"
+    [setSelectedSeat]="setSelectedSeat"
+  ></room-seats>
+  <br />
+  <button
+    [disabled]="!f.valid && selectedSeat == ''"
+    class="AddBtn"
+    (click)="handleSubmit(f.value)"
+  >
+    Rezerwuj
+  </button>
 </div>
-

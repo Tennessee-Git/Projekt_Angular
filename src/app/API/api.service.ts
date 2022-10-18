@@ -13,7 +13,7 @@ export class APIService {
   private URL!: string;
 
   constructor(private http : HttpClient) {
-    this.URL = 'http://localhost:3006';
+    this.URL = 'http://localhost:3007';
    }
 
   //GET -------------------------------------------
