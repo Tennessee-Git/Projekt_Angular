@@ -1,48 +1,50 @@
 <div class="form-wrapper">
   <h2>Edytuj informacje o seansie</h2>
-  <br/>
+  <br />
 
-<form #editSF="ngForm" (ngSubmit)="handleSubmit(editSF.value)">
-
-  <div class="form-inputs">
-    <label>Aktualny film: {{showing.movieTitle}}</label>
-    <mat-form-field appearance="outline">
-      <mat-select name="movieId" ngModel #movieId="ngModel" placeholder="Wybierz nowy film" required>
-        <mat-option *ngFor="let movie of movies" [value]="movie.id">
-          {{movie.label}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-    <div *ngIf="movieId.invalid && movieId.touched" class="error-msg">
-      <div *ngIf="movieId.errors?.['required']">Musisz wybrać film z listy!</div>
+  <form #editSF="ngForm" (ngSubmit)="handleSubmit(editSF.value)">
+    <div class="form-inputs">
+      <label>Aktualny film: {{ showing.movieTitle }}</label>
+      <mat-form-field appearance="outline">
+        <mat-select
+          name="movieId"
+          ngModel
+          #movieId="ngModel"
+          placeholder="Wybierz nowy film"
+        >
+          <mat-option *ngFor="let movie of movies" [value]="movie.id">
+            {{ movie.label }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
     </div>
-  </div>
 
-  <div class="form-inputs">
-    <label>Aktualna sala: Sala {{showing.roomId}}</label>
-    <mat-form-field appearance="outline">
-      <mat-select name="roomId" ngModel #roomId="ngModel"placeholder="Wybierz nową salę" required>
-        <mat-option *ngFor="let room of rooms" [value]="room.id">
-          Sala {{room.value}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-    <div *ngIf="roomId.invalid && roomId.touched" class="error-msg">
-      <div *ngIf="roomId.errors?.['required']">Musisz wybrać salę z listy!</div>
+    <div class="form-inputs">
+      <label>Aktualna sala: Sala {{ showing.roomId }}</label>
+      <mat-form-field appearance="outline">
+        <mat-select
+          name="roomId"
+          ngModel
+          #roomId="ngModel"
+          placeholder="Wybierz nową salę"
+        >
+          <mat-option *ngFor="let room of rooms" [value]="room.id">
+            Sala {{ room.value }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
     </div>
-  </div>
 
-  <div class="form-inputs">
-    <label>Aktualna data seansu: {{showing.date}}</label>
-    <input type="datetime-local" name="date" min="{{minDate}}" ngModel #date="ngModel" required>
-    <div *ngIf="date.invalid && date.touched" class="error-msg">
-      <div *ngIf="date.errors?.['required']">Musisz wybrać datę seansu!</div>
+    <div class="form-inputs">
+      <label>Aktualna data seansu: {{ showing.date }}</label>
+      <input
+        type="datetime-local"
+        name="date"
+        min="{{ minDate }}"
+        ngModel
+        #date="ngModel"
+      />
     </div>
-    <div class="error-msg">
-      <div></div>
-    </div>
-  </div>
-
-</form>
-<button [disabled]="!editSF.valid" class="AddBtn" (click)="handleSubmit(editSF.value)">Edytuj</button>
+  </form>
+  <button class="AddBtn" (click)="handleSubmit(editSF.value)">Edytuj</button>
 </div>

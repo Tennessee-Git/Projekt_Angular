@@ -65,6 +65,12 @@
       "value": 11,
       "label": "Sala 11",
       "id": 11
+    },
+    {
+      "capacity": 70,
+      "value": 12,
+      "label": "Sala 12",
+      "id": 12
     }
   ],
   "movies": [
@@ -84,6 +90,15 @@
       "length": 100,
       "label": "NowyFilm2",
       "value": 9
+    },
+    {
+      "title": "nowyfilm3",
+      "imageURL": "https://przedszkole.doruchow.pl/wp-content/uploads/2017/08/test.png",
+      "length": 100,
+      "label": "nowyfilm3",
+      "value": 10,
+      "popularity": 0,
+      "id": 10
     }
   ],
   "showings": [
@@ -123,6 +138,15 @@
         "A-3",
         "A-7"
       ]
+    },
+    {
+      "date": "29-11-2022 13:13",
+      "movieId": 10,
+      "roomId": 4,
+      "movieTitle": "nowyfilm3",
+      "availableSeats": 90,
+      "seatsTaken": [],
+      "id": 34
     }
   ],
   "reservations": [
