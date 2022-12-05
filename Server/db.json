@@ -104,7 +104,7 @@
   "showings": [
     {
       "id": 31,
-      "date": "25-11-2022 11:00",
+      "date": "01-12-2022 11:00",
       "movieId": 8,
       "roomId": 11,
       "movieTitle": "nowyfilm",
@@ -115,18 +115,18 @@
     },
     {
       "id": 32,
-      "date": "25-11-2022 10:00",
+      "date": "01-12-2022 10:00",
       "movieId": 8,
       "roomId": 10,
       "movieTitle": "nowyfilm",
-      "availableSeats": 89,
+      "availableSeats": 87,
       "seatsTaken": [
         "A-5"
       ]
     },
     {
       "id": 33,
-      "date": "25-11-2022 11:00",
+      "date": "01-12-2022 11:00",
       "movieId": 9,
       "roomId": 9,
       "movieTitle": "NowyFilm2",
@@ -140,7 +140,7 @@
       ]
     },
     {
-      "date": "29-11-2022 13:13",
+      "date": "07-12-2022 13:13",
       "movieId": 10,
       "roomId": 4,
       "movieTitle": "nowyfilm3",

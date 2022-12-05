@@ -6,7 +6,7 @@ import { Movie } from 'src/app/models/Movie';
 @Component({
   selector: 'app-edit-movie-form',
   templateUrl: './edit-movie-form.component.html',
-  styleUrls: ['../form-components.css']
+  styleUrls: ['../form-components.css'],
 })
 export class EditMovieFormComponent implements OnInit {
   id: number = -1;
@@ -15,27 +15,40 @@ export class EditMovieFormComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private api: APIService,
-    private router: Router) { }
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
+    this.route.paramMap.subscribe((params) => {
       this.id = Number(params.get('id'));
-      this.api.getMovieById(this.id).subscribe((response)=> {
+      this.api.getMovieById(this.id).subscribe((response) => {
         this.movie = response;
-        });
       });
+    });
   }
 
   handleSubmit(formValues: Movie) {
     console.log(formValues);
-    this.movie.imageURL = formValues.imageURL;
-    this.movie.title = formValues.title;
-    this.movie.length = formValues.length;
-    this.movie.label = formValues.title;
-    this.api.editMovie(this.movie, this.id).subscribe((response)=> {
+    this.movie.imageURL =
+      formValues.imageURL !== this.movie.imageURL &&
+      formValues.imageURL.length > 0
+        ? formValues.imageURL
+        : this.movie.imageURL;
+    this.movie.title =
+      formValues.title !== this.movie.title && formValues.title.length > 0
+        ? formValues.title
+        : this.movie.title;
+    this.movie.length =
+      formValues.length !== this.movie.length && formValues.length > 0
+        ? formValues.length
+        : this.movie.length;
+    this.movie.label =
+      formValues.title !== this.movie.title && formValues.title.length > 0
+        ? formValues.title
+        : this.movie.title;
+    this.api.editMovie(this.movie, this.id).subscribe((response) => {
       console.log(response);
       this.router.navigate(['/Filmy']);
     });
-
   }
 }

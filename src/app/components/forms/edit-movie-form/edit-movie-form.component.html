@@ -1,41 +1,65 @@
 <div class="form-wrapper">
   <h2>Edytuj informacje o filmie</h2>
-  <br/>
+  <br />
 
   <form #addF="ngForm" (ngSubmit)="handleSubmit(addF.value)">
-
     <div class="form-inputs">
-      <label>Aktualny tytuł: {{movie.title}}</label>
-      <input type="text" name="title" placeholder="Podaj tytuł" minlength="5" ngModel #title="ngModel" required />
-      <div *ngIf="title.invalid && title.touched" class="error-msg">
-        <div *ngIf="title.errors?.['minlength']">Tytuł filmu musi mieć co najmniej 5 liter!</div>
-        <div *ngIf="title.errors?.['required']"> Tytuł jest wymagany!</div>
-      </div>
+      <label>Aktualny tytuł: {{ movie.title }}</label>
+      <input
+        type="text"
+        name="title"
+        placeholder="Podaj tytuł"
+        minlength="5"
+        ngModel
+        #title="ngModel"
+        required
+      />
     </div>
 
     <div class="form-inputs">
       <label>Link do plakatu:</label>
-      <input type="url" name="imageURL" placeholder="Podaj link do plakatu" pattern="https://.*" ngModel #imageURL="ngModel" required />
-      <div *ngIf="imageURL.invalid && imageURL.touched" class="error-msg">
-        <div *ngIf="imageURL.errors?.['pattern']">To nie jest właściwy adres url!</div>
-        <div *ngIf="imageURL.errors?.['required']"> Link do plakatu jest wymagany!</div>
-      </div>
+      <input
+        type="url"
+        name="imageURL"
+        placeholder="Podaj link do plakatu"
+        pattern="https://.*"
+        ngModel
+        #imageURL="ngModel"
+        required
+      />
     </div>
     <div class="inline-images">
-      <img src="{{movie.imageURL}}" width="200px" height="250px" class="inline-image" alt="Podgląd plakatu" title="Stary plakat"/>
-      <img src="{{imageURL.value}}" width="200px" height="250px" class="inline-image" alt="Podgląd nowego plakatu" title="Nowy plakat"/>
-  </div>
-
-    <div class="form-inputs">
-      <label>Aktualna długość(min): {{movie.length}}</label>
-      <input type="number" name="length" placeholder="Podaj długość filmu" min="30" max="300" ngModel #length="ngModel" required />
-      <div *ngIf="length.invalid && length.touched" class="error-msg">
-        <div *ngIf="length.errors?.['min']">Film musi trwać co najmniej 30 minut!</div>
-        <div *ngIf="length.errors?.['max']">Film może trwać maksymalnie 300 minut!</div>
-        <div *ngIf="length.errors?.['required']"> Długość jest wymagana!</div>
-      </div>
+      <img
+        src="{{ movie.imageURL }}"
+        width="200px"
+        height="250px"
+        class="inline-image"
+        alt="Podgląd plakatu"
+        title="Stary plakat"
+      />
+      <img
+        src="{{ imageURL.value }}"
+        width="200px"
+        height="250px"
+        class="inline-image"
+        alt="Podgląd nowego plakatu"
+        title="Nowy plakat"
+      />
     </div>
 
+    <div class="form-inputs">
+      <label>Aktualna długość(min): {{ movie.length }}</label>
+      <input
+        type="number"
+        name="length"
+        placeholder="Podaj długość filmu"
+        min="30"
+        max="300"
+        ngModel
+        #length="ngModel"
+        required
+      />
+    </div>
   </form>
-  <button [disabled]="!addF.valid" class="AddBtn" (click)="handleSubmit(addF.value)">Edytuj</button>
+  <button class="AddBtn" (click)="handleSubmit(addF.value)">Edytuj</button>
 </div>
